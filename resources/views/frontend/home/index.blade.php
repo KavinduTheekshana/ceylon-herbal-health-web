@@ -1,145 +1,13 @@
-
 @extends('layouts.frontend')
 
 @section('content')
-
-@include('frontend.home.slider')
-@include('frontend.home.about')
-
-
+    @include('frontend.home.slider')
+    @include('frontend.home.about')
+    @include('frontend.home.services')
 
 
 
-    <!-- Our Services Section Start -->
-    <div class="our-services">
-        <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">Services</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Comprehensive yoga and <span>meditation services</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
 
-                <div class="col-lg-6">
-                    <!-- Section Button Start -->
-                    <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
-                        <a href="services.html" class="btn-default">view all services</a>
-                    </div>
-                    <!-- Section Button End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp">
-                        <!-- Service Header Start -->
-                        <div class="service-header">
-                            <div class="icon-box">
-                                <img src="images/icon-service-item-1.svg" alt="">
-                            </div>
-                            <div class="service-btn">
-                                <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Service Header End -->
-
-                        <!-- Service Content Start -->
-                        <div class="service-content">
-                            <h3><a href="service-single.html">Beginner Yoga Classes</a></h3>
-                            <p>Learn foundational poses and techniques yoga journey.</p>
-                        </div>
-                        <!-- Service Content End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Service Header Start -->
-                        <div class="service-header">
-                            <div class="icon-box">
-                                <img src="images/icon-service-item-2.svg" alt="">
-                            </div>
-                            <div class="service-btn">
-                                <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Service Header End -->
-
-                        <!-- Service Content Start -->
-                        <div class="service-content">
-                            <h3><a href="service-single.html">Stress Relief Sessions</a></h3>
-                            <p>Learn foundational poses and techniques yoga journey.</p>
-                        </div>
-                        <!-- Service Content End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Service Header Start -->
-                        <div class="service-header">
-                            <div class="icon-box">
-                                <img src="images/icon-service-item-3.svg" alt="">
-                            </div>
-                            <div class="service-btn">
-                                <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Service Header End -->
-
-                        <!-- Service Content Start -->
-                        <div class="service-content">
-                            <h3><a href="service-single.html">Mindful Meditation</a></h3>
-                            <p>Learn foundational poses and techniques yoga journey.</p>
-                        </div>
-                        <!-- Service Content End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.6s">
-                        <!-- Service Header Start -->
-                        <div class="service-header">
-                            <div class="icon-box">
-                                <img src="images/icon-service-item-4.svg" alt="">
-                            </div>
-                            <div class="service-btn">
-                                <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Service Header End -->
-
-                        <!-- Service Content Start -->
-                        <div class="service-content">
-                            <h3><a href="service-single.html">Mental Clarity Meditation</a></h3>
-                            <p>Learn foundational poses and techniques yoga journey.</p>
-                        </div>
-                        <!-- Service Content End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text wow fadeInUp" data-wow-delay="0.2s">
-                        <p><span>Free</span>Let's make something great work together. <a href="contact.html">Get Free Quote</a></p>
-                    </div>
-                    <!-- Section Footer Text End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Services Section End -->
 
     <!-- What We Do Section Start -->
     <div class="what-we-do">
@@ -161,8 +29,11 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">what we do</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Transforming minds and <span>bodies through yoga</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Unlock the power of yoga to harmonize your mind and body. Our practice integrates mindful movement, meditation, and breathing techniques to promote physical strength, mental clarity.</p>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Transforming minds and <span>bodies through
+                                    yoga</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Unlock the power of yoga to harmonize your mind
+                                and body. Our practice integrates mindful movement, meditation, and breathing techniques to
+                                promote physical strength, mental clarity.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -264,7 +135,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">why choose us</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Experience excellence in <span>yoga and meditation</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Experience excellence in <span>yoga and
+                                meditation</span></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -272,7 +144,8 @@
                 <div class="col-lg-6">
                     <!-- Section Title Content Start -->
                     <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-                        <p>Join us to experience expert-guided yoga and meditation practices designed to enhance your physical health, mental clarity, and overall well-being.</p>
+                        <p>Join us to experience expert-guided yoga and meditation practices designed to enhance your
+                            physical health, mental clarity, and overall well-being.</p>
                     </div>
                     <!-- Section Title Content End -->
                 </div>
@@ -297,7 +170,8 @@
                             </div>
                             <div class="why-choose-item-content">
                                 <h3>Yoga for Balance</h3>
-                                <p>Achieve harmony of body and spirit through gent practices designed to enhance physical stability, mental clarity.</p>
+                                <p>Achieve harmony of body and spirit through gent practices designed to enhance physical
+                                    stability, mental clarity.</p>
                             </div>
                         </div>
                         <!-- Why Choose Item End -->
@@ -309,7 +183,8 @@
                             </div>
                             <div class="why-choose-item-content">
                                 <h3>Inner Peace Workshops</h3>
-                                <p>Achieve harmony of body and spirit through gent practices designed to enhance physical stability, mental clarity.</p>
+                                <p>Achieve harmony of body and spirit through gent practices designed to enhance physical
+                                    stability, mental clarity.</p>
                             </div>
                         </div>
                         <!-- Why Choose Item End -->
@@ -381,7 +256,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">Our Benefits</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Comprehensive yoga and <span>meditation services</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Comprehensive yoga and <span>meditation
+                                services</span></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -406,7 +282,8 @@
                             </div>
                             <div class="benefit-item-content">
                                 <h3>Expert Instructors</h3>
-                                <p>We focus on connection, offering a complete wellness experience that nurtures your physical</p>
+                                <p>We focus on connection, offering a complete wellness experience that nurtures your
+                                    physical</p>
                             </div>
                         </div>
                         <!-- Benefit Item End -->
@@ -418,7 +295,8 @@
                             </div>
                             <div class="benefit-item-content">
                                 <h3>Stress Reduction</h3>
-                                <p>We focus on connection, offering a complete wellness experience that nurtures your physical</p>
+                                <p>We focus on connection, offering a complete wellness experience that nurtures your
+                                    physical</p>
                             </div>
                         </div>
                         <!-- Benefit Item End -->
@@ -446,7 +324,8 @@
                             </div>
                             <div class="benefit-item-content">
                                 <h3>Emotional Balance</h3>
-                                <p>We focus on connection, offering a complete wellness experience that nurtures your physical</p>
+                                <p>We focus on connection, offering a complete wellness experience that nurtures your
+                                    physical</p>
                             </div>
                         </div>
                         <!-- Benefit Item End -->
@@ -458,7 +337,8 @@
                             </div>
                             <div class="benefit-item-content">
                                 <h3>Mind-Body Harmony</h3>
-                                <p>We focus on connection, offering a complete wellness experience that nurtures your physical</p>
+                                <p>We focus on connection, offering a complete wellness experience that nurtures your
+                                    physical</p>
                             </div>
                         </div>
                         <!-- Benefit Item End -->
@@ -480,7 +360,10 @@
                         <div class="intro-bg-video">
                             <!-- Selfhosted Video Start -->
                             <!-- <video autoplay muted loop id="introVideo"><source src="images/restraint-video.mp4" type="video/mp4"></video> -->
-                            <video autoplay muted loop id="introVideo"><source src="https://demo.awaikenthemes.com/assets/videos/restraint-video.mp4" type="video/mp4"></video>
+                            <video autoplay muted loop id="introVideo">
+                                <source src="https://demo.awaikenthemes.com/assets/videos/restraint-video.mp4"
+                                    type="video/mp4">
+                            </video>
                             <!-- Selfhosted Video End -->
 
                             <!-- Youtube Video Start -->
@@ -491,7 +374,8 @@
 
                         <!-- Video Play Button Start -->
                         <div class="video-play-button">
-                            <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">Play</a>
+                            <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
+                                data-cursor-text="Play">Play</a>
                         </div>
                         <!-- Video Play Button End -->
                     </div>
@@ -509,7 +393,8 @@
                 <div class="col-lg-9">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Journey to Explore Yoga Amidst Stunning Natural Landscapes</h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Journey to Explore Yoga Amidst Stunning
+                            Natural Landscapes</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -536,7 +421,8 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">how it work</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Discover our yoga and <span>meditation process</span></h2>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Discover our yoga and <span>meditation
+                                    process</span></h2>
                         </div>
                         <!-- Section Title End -->
 
@@ -549,7 +435,8 @@
                                 </div>
                                 <div class="how-work-step-content">
                                     <h3>Choose Your Yoga Practice</h3>
-                                    <p>Foster a sense of belonging with our supportive community your journey, exchange experiences.</p>
+                                    <p>Foster a sense of belonging with our supportive community your journey, exchange
+                                        experiences.</p>
                                 </div>
                             </div>
                             <!-- How Work Step End -->
@@ -561,7 +448,8 @@
                                 </div>
                                 <div class="how-work-step-content">
                                     <h3>Schedule Your Yoga Session</h3>
-                                    <p>Foster a sense of belonging with our supportive community your journey, exchange experiences.</p>
+                                    <p>Foster a sense of belonging with our supportive community your journey, exchange
+                                        experiences.</p>
                                 </div>
                             </div>
                             <!-- How Work Step End -->
@@ -573,7 +461,8 @@
                                 </div>
                                 <div class="how-work-step-content">
                                     <h3>Practice Mindfulness Daily</h3>
-                                    <p>Foster a sense of belonging with our supportive community your journey, exchange experiences.</p>
+                                    <p>Foster a sense of belonging with our supportive community your journey, exchange
+                                        experiences.</p>
                                 </div>
                             </div>
                             <!-- How Work Step End -->
@@ -605,7 +494,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">our features</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Unlock wellness through <span>unique yoga features</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Unlock wellness through <span>unique yoga
+                                features</span></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -613,7 +503,8 @@
                 <div class="col-lg-6">
                     <!-- Section Title Content Start -->
                     <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-                        <p>Join us to experience expert-guided yoga and meditation practices designed to enhance your physical health, mental clarity, and overall well-being.</p>
+                        <p>Join us to experience expert-guided yoga and meditation practices designed to enhance your
+                            physical health, mental clarity, and overall well-being.</p>
                     </div>
                     <!-- Section Title Content End -->
                 </div>
@@ -696,7 +587,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">our pricing</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Flexible pricing for yoga  <span>and meditation</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Flexible pricing for yoga <span>and
+                                meditation</span></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -704,7 +596,8 @@
                 <div class="col-lg-6">
                     <!-- Section Title Content Start -->
                     <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-                        <p>Choose from our flexible pricing plans designed to suit your needs. Whether you're a beginner or advanced practitioner, we offer affordable.</p>
+                        <p>Choose from our flexible pricing plans designed to suit your needs. Whether you're a beginner or
+                            advanced practitioner, we offer affordable.</p>
                     </div>
                     <!-- Section Title Content End -->
                 </div>
@@ -930,7 +823,7 @@
         </div>
         <!-- Scrolling Ticker Box End -->
     </div>
-	<!-- Scrolling Ticker End -->
+    <!-- Scrolling Ticker End -->
 
     <!-- Our Testimonials Section Start -->
     <div class="our-testimonials">
@@ -960,7 +853,9 @@
                             </div>
                             <div class="testimonial-review-body">
                                 <div class="testimonial-review-content">
-                                    <p>Experience the benefits of yoga with a free trial class! Discover how mindful movement, techniques, and guided relaxation can enhance your well-being No matter your skill level, this is the perfect.</p>
+                                    <p>Experience the benefits of yoga with a free trial class! Discover how mindful
+                                        movement, techniques, and guided relaxation can enhance your well-being No matter
+                                        your skill level, this is the perfect.</p>
                                 </div>
                                 <div class="testimonial-review-btn">
                                     <a href="contact.html"><img src="images/arrow-white.svg" alt=""></a>
@@ -978,7 +873,8 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">testimonials</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Real stories transformation <span>and growth</span></h2>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Real stories transformation <span>and
+                                    growth</span></h2>
                         </div>
                         <!-- Section Title End -->
 
@@ -997,7 +893,9 @@
                                     </div>
                                 </div>
                                 <div class="testimonial-item-content">
-                                    <p>"Joining this yoga and meditation program was life-changing. I feel more balanced, focused, and at peace than ever before The instructors are knowledgeable, patient, and truly inspiring."</p>
+                                    <p>"Joining this yoga and meditation program was life-changing. I feel more balanced,
+                                        focused, and at peace than ever before The instructors are knowledgeable, patient,
+                                        and truly inspiring."</p>
                                 </div>
                                 <div class="testimonial-rating">
                                     <i class="fa-solid fa-star"></i>
@@ -1023,7 +921,9 @@
                                     </div>
                                 </div>
                                 <div class="testimonial-item-content">
-                                    <p>"Joining this yoga and meditation program was life-changing. I feel more balanced, focused, and at peace than ever before The instructors are knowledgeable, patient, and truly inspiring."</p>
+                                    <p>"Joining this yoga and meditation program was life-changing. I feel more balanced,
+                                        focused, and at peace than ever before The instructors are knowledgeable, patient,
+                                        and truly inspiring."</p>
                                 </div>
                                 <div class="testimonial-rating">
                                     <i class="fa-solid fa-star"></i>
@@ -1051,7 +951,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">FAQs</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Answers to common yoga <span>meditation questions</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Answers to common yoga <span>meditation
+                                questions</span></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -1074,13 +975,16 @@
                             <!-- FAQ Item Start -->
                             <div class="accordion-item wow fadeInUp">
                                 <h2 class="accordion-header" id="heading1">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
                                         What is yoga, and how can it benefit me?
                                     </button>
                                 </h2>
-                                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordion">
+                                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+                                    data-bs-parent="#accordion">
                                     <div class="accordion-body">
-                                        <p>No prior experience is required. Our classes cater to all levels, from beginners to advanced practitioners. Instructors will guide you every step of the way.</p>
+                                        <p>No prior experience is required. Our classes cater to all levels, from beginners
+                                            to advanced practitioners. Instructors will guide you every step of the way.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1089,13 +993,16 @@
                             <!-- FAQ Item Start -->
                             <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
                                 <h2 class="accordion-header" id="heading2">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                         Do I need prior experience to join a class?
                                     </button>
                                 </h2>
-                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion">
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                                    data-bs-parent="#accordion">
                                     <div class="accordion-body">
-                                        <p>No prior experience is required. Our classes cater to all levels, from beginners to advanced practitioners. Instructors will guide you every step of the way.</p>
+                                        <p>No prior experience is required. Our classes cater to all levels, from beginners
+                                            to advanced practitioners. Instructors will guide you every step of the way.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1104,13 +1011,16 @@
                             <!-- FAQ Item Start -->
                             <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
                                 <h2 class="accordion-header" id="heading3">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                         What's the difference between yoga and meditation?
                                     </button>
                                 </h2>
-                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion">
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                    data-bs-parent="#accordion">
                                     <div class="accordion-body">
-                                        <p>No prior experience is required. Our classes cater to all levels, from beginners to advanced practitioners. Instructors will guide you every step of the way.</p>
+                                        <p>No prior experience is required. Our classes cater to all levels, from beginners
+                                            to advanced practitioners. Instructors will guide you every step of the way.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1119,13 +1029,16 @@
                             <!-- FAQ Item Start -->
                             <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
                                 <h2 class="accordion-header" id="heading4">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                         What types of yoga classes do you offer?
                                     </button>
                                 </h2>
-                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion">
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                    data-bs-parent="#accordion">
                                     <div class="accordion-body">
-                                        <p>No prior experience is required. Our classes cater to all levels, from beginners to advanced practitioners. Instructors will guide you every step of the way.</p>
+                                        <p>No prior experience is required. Our classes cater to all levels, from beginners
+                                            to advanced practitioners. Instructors will guide you every step of the way.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1134,13 +1047,16 @@
                             <!-- FAQ Item Start -->
                             <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
                                 <h2 class="accordion-header" id="heading5">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
                                         How do I know which class is right for me?
                                     </button>
                                 </h2>
-                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion">
+                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                                    data-bs-parent="#accordion">
                                     <div class="accordion-body">
-                                        <p>No prior experience is required. Our classes cater to all levels, from beginners to advanced practitioners. Instructors will guide you every step of the way.</p>
+                                        <p>No prior experience is required. Our classes cater to all levels, from beginners
+                                            to advanced practitioners. Instructors will guide you every step of the way.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1185,7 +1101,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">Latest blog</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Explore our latest <span>yoga insights</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Explore our latest <span>yoga insights</span>
+                        </h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -1235,8 +1152,8 @@
                 <div class="col-lg-4 col-md-6">
                     <!-- Post Item Start -->
                     <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
-                       <!-- Post Featured Image Start-->
-                       <div class="post-featured-image">
+                        <!-- Post Featured Image Start-->
+                        <div class="post-featured-image">
                             <a href="blog-single.html" data-cursor-text="View">
                                 <figure class="image-anime">
                                     <img src="images/post-2.jpg" alt="">
@@ -1299,6 +1216,4 @@
         </div>
     </div>
     <!-- Our Blog Section End -->
-
-
-    @endsection
+@endsection

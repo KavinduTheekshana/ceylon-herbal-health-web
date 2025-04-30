@@ -25,7 +25,7 @@ class ViewService extends ViewRecord
 
             Actions\Action::make('toggle_featured')
                 ->label(fn (): string => $this->record->is_featured ? 'Unfeature' : 'Feature')
-                ->icon(fn (): string => $this->record->is_featured ? 'heroicon-o-star-slash' : 'heroicon-o-star')
+                ->icon(fn (): string => $this->record->is_featured ? 'heroicon-o-minus-circle' : 'heroicon-o-star')
                 ->color(fn (): string => $this->record->is_featured ? 'warning' : 'primary')
                 ->action(fn () => $this->record->update(['is_featured' => !$this->record->is_featured]))
                 ->requiresConfirmation(),

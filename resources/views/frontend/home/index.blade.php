@@ -4,83 +4,11 @@
 @section('content')
 
 @include('frontend.home.slider')
+@include('frontend.home.about')
 
 
-    <!-- About Us Section Start -->
-    <div class="about-us" id="home-about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <!-- About Images Start -->
-                    <div class="about-images">
-                        <!-- About Image Start -->
-                        <div class="about-image">
-                            <figure>
-                                <img src="images/about-us-img.png" alt="">
-                            </figure>
-                        </div>
-                        <!-- About Image End -->
 
-                        <!-- About Image Title Start -->
-                        <div class="about-image-title">
-                            <h2>about us</h2>
-                        </div>
-                        <!-- About Image Title End -->
-                    </div>
-                    <!-- About Images End -->
-                </div>
 
-                <div class="col-lg-6">
-                    <!-- About Us Content Start -->
-                    <div class="about-us-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">about us</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Transforming lives through <span>yoga and meditation</span></h2>
-                            <P class="wow fadeInUp" data-wow-delay="0.2s">Discover inner peace and well-being through yoga Our practice combines physical movement, mindfulness, and breathing techniques to help you achieve balance, reduce stress, and foster personal growth.</P>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- About Content Body Start -->
-                        <div class="about-content-body">
-                            <!-- About Benefit Item Start -->
-                            <div class="about-benefit-item wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="icon-box">
-                                    <img src="images/icon-about-benefit-1.svg" alt="">
-                                </div>
-                                <div class="about-benefit-item-content">
-                                    <h3>Community Support and Encouragement</h3>
-                                    <p>Foster a sense of belonging with our supportive community. Share your journey, exchange experiences.</p>
-                                </div>
-                            </div>
-                            <!-- About Benefit Item End -->
-
-                            <!-- About Benefit Item Start -->
-                            <div class="about-benefit-item wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="icon-box">
-                                    <img src="images/icon-about-benefit-2.svg" alt="">
-                                </div>
-                                <div class="about-benefit-item-content">
-                                    <h3>Enhanced Physical Flexibility and Strength</h3>
-                                    <p>Foster a sense of belonging with our supportive community. Share your journey, exchange experiences.</p>
-                                </div>
-                            </div>
-                            <!-- About Benefit Item End -->
-                        </div>
-                        <!-- About Content Body End -->
-
-                        <!-- About Content Button Start -->
-                        <div class="about-content-btn wow fadeInUp" data-wow-delay="0.8s">
-                            <a href="about.html" class="btn-default">more about us</a>
-                        </div>
-                        <!-- About Content Button End -->
-                    </div>
-                    <!-- About Us Content End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About Us Section End -->
 
     <!-- Our Services Section Start -->
     <div class="our-services">

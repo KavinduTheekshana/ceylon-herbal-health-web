@@ -31,13 +31,17 @@ class FaqCategoryResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->live(onBlur: true)
-                            ->afterStateUpdated(fn (string $state, Forms\Set $set) =>
-                                $set('slug', Str::slug($state))),
+                            ->afterStateUpdated(fn(string $state, Forms\Set $set) =>
+                            $set('slug', Str::slug($state))),
 
                         Forms\Components\TextInput::make('slug')
                             ->required()
                             ->maxLength(255)
-                            ->unique(ignoreRecord: true),
+                            ->unique(ignoreRecord: true)
+                            ->readOnly()
+                            ->extraAttributes([
+                                'style' => 'background-color: #f3f4f6;', // Light gray background
+                            ]),
 
                         Forms\Components\Textarea::make('description')
                             ->nullable()

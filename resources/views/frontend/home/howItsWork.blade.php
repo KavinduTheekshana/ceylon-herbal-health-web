@@ -8,8 +8,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">how it work</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Discover our yoga and <span>meditation
-                                process</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Discover our healing journey through yoga,
+                            meditation, and <span>herbal therapies</span></span></h2>
                     </div>
                     <!-- Section Title End -->
 
@@ -21,9 +21,10 @@
                                 <h2>01</h2>
                             </div>
                             <div class="how-work-step-content">
-                                <h3>Choose Your Yoga Practice</h3>
-                                <p>Foster a sense of belonging with our supportive community your journey, exchange
-                                    experiences.</p>
+                                <h3>Choose Your Healing Path</h3>
+                                <p>FBegin by selecting the wellness experience that suits your needs—be it herbal
+                                    therapy, guided meditation, or a restorative yoga practice. Our team is here to
+                                    guide you toward the right path for your body and mind.</p>
                             </div>
                         </div>
                         <!-- How Work Step End -->
@@ -34,9 +35,10 @@
                                 <h2>02</h2>
                             </div>
                             <div class="how-work-step-content">
-                                <h3>Schedule Your Yoga Session</h3>
-                                <p>Foster a sense of belonging with our supportive community your journey, exchange
-                                    experiences.</p>
+                                <h3>Schedule Your Personalized Session</h3>
+                                <p>Easily book a convenient time for your session. Whether in-person or online, our
+                                    skilled practitioners ensure you receive a tailored experience that promotes deep
+                                    relaxation and natural healing.</p>
                             </div>
                         </div>
                         <!-- How Work Step End -->
@@ -47,9 +49,10 @@
                                 <h2>03</h2>
                             </div>
                             <div class="how-work-step-content">
-                                <h3>Practice Mindfulness Daily</h3>
-                                <p>Foster a sense of belonging with our supportive community your journey, exchange
-                                    experiences.</p>
+                                <h3>Embrace Daily Balance and Wellness</h3>
+                                <p>Incorporate our recommended practices and herbal remedies into your daily life. With
+                                    consistent care, you'll experience lasting rejuvenation, improved energy, and a
+                                    deeper connection to your natural wellbeing.</p>
                             </div>
                         </div>
                         <!-- How Work Step End -->

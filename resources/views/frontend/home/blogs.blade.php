@@ -6,7 +6,8 @@
                 <!-- Section Title Start -->
                 <div class="section-title">
                     <h3 class="wow fadeInUp">Latest blog</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque">Explore our latest <span>yoga insights</span>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">Explore natural healing, <span>wellness rituals,
+                            and herbal wisdom</span>
                     </h2>
                 </div>
                 <!-- Section Title End -->

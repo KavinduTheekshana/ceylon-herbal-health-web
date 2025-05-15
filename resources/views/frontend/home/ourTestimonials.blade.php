@@ -58,7 +58,7 @@
                             <div class="testimonial-author">
                                 <div class="author-image">
                                     <figure class="image-anime">
-                                        <img src={{ 'frontend/images/scrolling-ticker-image-2.jpg' }} alt="">
+                                        <img src={{ 'frontend/images/scrolling-ticker-image-6.jpg' }} alt="">
                                     </figure>
                                 </div>
                                 <div class="author-content">
@@ -86,7 +86,7 @@
                             <div class="testimonial-author">
                                 <div class="author-image">
                                     <figure class="image-anime">
-                                        <img src={{ 'frontend/images/scrolling-ticker-image-2.jpg' }} alt="">
+                                        <img src={{ 'frontend/images/scrolling-ticker-image-6.jpg' }} alt="">
                                     </figure>
                                 </div>
                                 <div class="author-content">

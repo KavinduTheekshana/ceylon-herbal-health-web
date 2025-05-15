@@ -6,8 +6,8 @@
                 <!-- Section Title Start -->
                 <div class="section-title">
                     <h3 class="wow fadeInUp">FAQs</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque">Answers to common yoga <span>meditation
-                            questions</span></h2>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">Got questions? We’re here to help you feel
+                        confident on your healing journey.</span></h2>
                 </div>
                 <!-- Section Title End -->
             </div>
@@ -32,14 +32,14 @@
                             <h2 class="accordion-header" id="heading1">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                    What is yoga, and how can it benefit me?
+                                    What types of herbal treatments do you offer?
                                 </button>
                             </h2>
                             <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
                                 data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>No prior experience is required. Our classes cater to all levels, from beginners
-                                        to advanced practitioners. Instructors will guide you every step of the way.</p>
+                                    <p>We offer personalized treatments using traditional Ceylonese herbs to support
+                                        detox, boost immunity, relieve stress, and promote overall wellness.</p>
                                 </div>
                             </div>
                         </div>

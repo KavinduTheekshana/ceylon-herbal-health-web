@@ -15,8 +15,9 @@
             <div class="col-lg-6">
                 <!-- Section Title Content Start -->
                 <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-                    <p>Join us to experience expert-guided yoga and meditation practices designed to enhance your
-                        physical health, mental clarity, and overall well-being.</p>
+                    <p>Unlock natural wellness with Ceylon Herbal Health
+                        Experience the harmony of body and mind through expert-led yoga, meditation, and herbal
+                        therapies designed to help you relax, rejuvenate, and restore your well-being.</p>
                 </div>
                 <!-- Section Title Content End -->
             </div>
@@ -27,8 +28,8 @@
                 <!-- Features Item Start -->
                 <div class="features-item wow fadeInUp">
                     <div class="features-item-content">
-                        <p>Ashtanga Yoga</p>
-                        <h3>Healing Retreats and Workshops</h3>
+                        <p>Traditional Herbal Treatments</p>
+                        <h3>Natural remedies for body and mind</h3>
                     </div>
                     <div class="features-item-image">
                         <figure>
@@ -45,8 +46,8 @@
                     <!-- Features Box Start -->
                     <div class="features-box box-1 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="features-box-content">
-                            <p>Ashtanga Yoga</p>
-                            <h3>Community Support and Yoga Encouragement</h3>
+                            <p>Holistic Healing Therapies</p>
+                            <h3>Deep wellness through energy balance</h3>
                         </div>
                         <div class="features-box-image">
                             <figure>
@@ -57,10 +58,10 @@
                     <!-- Features Box End -->
 
                     <!-- Features Box Start -->
-                    <div class="features-box box-2 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="features-box box-1 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="features-box-content">
-                            <p>Ashtanga</p>
-                            <h3>Guided Meditation Sessions</h3>
+                            <p>Wellness Retreats & Nature Programs</p>
+                            <h3>Rejuvenate in serene natural settings</h3>
                         </div>
                         <div class="features-box-image">
                             <figure>
@@ -71,17 +72,7 @@
                     <!-- Features Box End -->
 
                     <!-- Features Item Start -->
-                    <div class="features-item features-box box-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="features-box-content">
-                            <p>Ashtanga</p>
-                            <h3>Stress-Relief Programs</h3>
-                        </div>
-                        <div class="features-item-image">
-                            <figure>
-                                <img src={{ 'frontend/images/features-image-4.png' }} alt="">
-                            </figure>
-                        </div>
-                    </div>
+
                     <!-- Features Item End -->
                 </div>
                 <!-- Our Features Boxes End -->

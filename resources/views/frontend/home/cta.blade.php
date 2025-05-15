@@ -5,8 +5,7 @@
                 <div class="col-lg-9">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Journey to Explore Yoga Amidst Stunning
-                            Natural Landscapes</h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Restore Balance Naturally with Ceylon Herbals</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>

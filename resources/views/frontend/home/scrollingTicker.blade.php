@@ -4,31 +4,33 @@
     <div class="scrolling-ticker-box">
         <!-- Scrolling Content Start -->
         <div class="scrolling-content">
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Serene Flow</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Mindful Movement</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Yoga Journey</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Flex & Relax</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Calm & Balance</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Serene Flow</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Mindful Movement</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Yoga Journey</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Flex & Relax</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Calm & Balance</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Herbal Healing</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Natural Wellness</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Mindful Living</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Holistic Harmony</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Ceylon Calm</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Rejuvenate Naturally</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Botanical Balance</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Therapeutic Touch</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Sacred Stillness</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Nature’s Remedy</span>
+
         </div>
         <!-- Scrolling Content End -->
 
         <!-- Scrolling Content Start -->
         <div class="scrolling-content">
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Serene Flow</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Mindful Movement</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Yoga Journey</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Flex & Relax</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Calm & Balance</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Serene Flow</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Mindful Movement</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Yoga Journey</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Flex & Relax</span>
-            <span><img src={{ 'frontend/images/icon-asterisk.svg' }} alt="">Calm & Balance</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Herbal Healing</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Natural Wellness</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Mindful Living</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Holistic Harmony</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Ceylon Calm</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Rejuvenate Naturally</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Botanical Balance</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Therapeutic Touch</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Sacred Stillness</span>
+            <span><img src="{{ 'frontend/images/icon-asterisk.svg' }}" alt="">Nature’s Remedy</span>
+
         </div>
         <!-- Scrolling Content End -->
 

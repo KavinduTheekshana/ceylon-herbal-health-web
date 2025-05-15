@@ -20,21 +20,24 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">what we do</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Transforming minds and <span>bodies through
-                                yoga</span></h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Unlock the power of yoga to harmonize your mind
-                            and body. Our practice integrates mindful movement, meditation, and breathing techniques to
-                            promote physical strength, mental clarity.</p>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Transforming Lives Through Natural Healing
+                            yoga</span></h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">
+                            Discover the ancient wisdom of Ceylon herbal
+                            remedies for modern wellness. Our therapeutic treatments harness the power of nature's
+                            pharmacy to restore balance, relieve stress, and revitalize your body's innate healing
+                            abilities.
+                        </p>
                     </div>
                     <!-- Section Title End -->
 
                     <!-- What We Body Start -->
                     <div class="what-we-body wow fadeInUp" data-wow-delay="0.4s">
                         <ul>
-                            <li>Mindful Movement for Balance</li>
-                            <li>Guided Meditation for Clarity</li>
-                            <li>Personalized Wellness Programs</li>
-                            <li>Yoga for Every Skill Level</li>
+                            <li>Traditional Herbal Consultations</li>
+                            <li>Rejuvenating Herbal Therapies</li>
+                            <li>Custom Herbal Formulations</li>
+                            <li>Holistic Wellness Programs </li>
                         </ul>
                     </div>
                     <!-- What We Body End -->
@@ -56,11 +59,11 @@
                         <!-- What We Item Start -->
                         <div class="what-we-item wow fadeInUp">
                             <div class="icon-box">
-                                <img src="images/icon-what-we-item-1.svg" alt="">
+                                <img src={{ 'frontend/images/icon-what-we-item-1.svg' }} alt="">
                             </div>
                             <div class="what-we-item-content">
-                                <h3>Holistic Wellness Programs</h3>
-                                <p>Experience a approach to well-being with programs that combine.</p>
+                                <h3>Traditional Herbal Consultations</h3>
+                                <p>Personalized treatment plans using time-tested botanical remedies</p>
                             </div>
                         </div>
                         <!-- What We Item End -->
@@ -68,11 +71,11 @@
                         <!-- What We Item Start -->
                         <div class="what-we-item wow fadeInUp" data-wow-delay="0.2s">
                             <div class="icon-box">
-                                <img src="images/icon-what-we-item-2.svg" alt="">
+                                <img src={{ 'frontend/images/icon-what-we-item-2.svg' }} alt="">
                             </div>
                             <div class="what-we-item-content">
-                                <h3>Group Meditation Sessions</h3>
-                                <p>Experience a approach to well-being with programs that combine.</p>
+                                <h3>Rejuvenating Herbal Therapies</h3>
+                                <p>Specialized treatments to detoxify and regenerate body systems</p>
                             </div>
                         </div>
                         <!-- What We Item End -->
@@ -80,11 +83,11 @@
                         <!-- What We Item Start -->
                         <div class="what-we-item wow fadeInUp" data-wow-delay="0.4s">
                             <div class="icon-box">
-                                <img src="images/icon-what-we-item-3.svg" alt="">
+                                <img src={{ 'frontend/images/icon-what-we-item-3.svg' }} alt="">
                             </div>
                             <div class="what-we-item-content">
-                                <h3>Relaxation Techniques</h3>
-                                <p>Experience a approach to well-being with programs that combine.</p>
+                                <h3>Custom Herbal Formulations</h3>
+                                <p>Handcrafted blends tailored to your unique wellness needs</p>
                             </div>
                         </div>
                         <!-- What We Item End -->
@@ -92,11 +95,11 @@
                         <!-- What We Item Start -->
                         <div class="what-we-item wow fadeInUp" data-wow-delay="0.6s">
                             <div class="icon-box">
-                                <img src="images/icon-what-we-item-4.svg" alt="">
+                                <img src={{ 'frontend/images/icon-what-we-item-4.svg' }} alt="">
                             </div>
                             <div class="what-we-item-content">
-                                <h3>Breathwork Practices</h3>
-                                <p>Experience a approach to well-being with programs that combine.</p>
+                                <h3>Holistic Wellness Programs</h3>
+                                <p>Comprehensive approaches for sustained health and vitality</p>
                             </div>
                         </div>
                         <!-- What We Item End -->

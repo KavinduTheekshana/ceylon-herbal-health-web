@@ -1285,8 +1285,9 @@ header.main-header .header-sticky.active{
 
 .what-we-image img{
 	width: 100%;
-	aspect-ratio: 1 / 1.03;
-	object-fit: cover;
+	aspect-ratio: 1 / 2;
+	object-fit: contain;
+    border-radius: 30px;
 }
 
 .what-we-body{
@@ -1403,8 +1404,9 @@ header.main-header .header-sticky.active{
 
 .why-choose-image img{
 	width: 100%;
-	aspect-ratio: 1 / 0.5512;
+	aspect-ratio: 1 / 0.7;
 	object-fit: cover;
+
 	border-radius: 20px;
 }
 
@@ -1734,7 +1736,7 @@ header.main-header .header-sticky.active{
 	padding-bottom: 40px
 }
 
-.how-work-image::before{
+/* .how-work-image::before{
     content: '';
     position: absolute;
     top: 0;
@@ -1744,9 +1746,9 @@ header.main-header .header-sticky.active{
     border-radius: 50%;
     width: 100%;
     height: 100%;
-}
+} */
 
-.how-work-image::after{
+/* .how-work-image::after{
     content: '';
     position: absolute;
     top: 30px;
@@ -1756,7 +1758,7 @@ header.main-header .header-sticky.active{
     border-radius: 50%;
     width: 100%;
     height: calc(100% - 60px);
-}
+} */
 
 .how-work-image figure{
 	position: relative;
@@ -1768,7 +1770,7 @@ header.main-header .header-sticky.active{
 
 .how-work-image img{
 	width: 100%;
-	aspect-ratio: 1 / 0.92;
+	aspect-ratio: 1 / 1.5;
 	object-fit: cover;
 }
 
@@ -2515,7 +2517,7 @@ header.main-header .header-sticky.active{
 }
 
 .post-featured-image a{
-    cursor: none;	
+    cursor: none;
     display: block;
 	border-radius: 30px;
     overflow: hidden;
@@ -3832,7 +3834,7 @@ header.main-header .header-sticky.active{
     transition: all 0.3s ease-in-out;
 }
 
-.page-pagination ul li.active a, 
+.page-pagination ul li.active a,
 .page-pagination ul li a:hover{
     background: var(--accent-color);
 	color: var(--white-color);
@@ -3897,7 +3899,7 @@ header.main-header .header-sticky.active{
 }
 
 .post-image figure{
-	display: block;	
+	display: block;
 	border-radius: 30px;
 	overflow: hidden;
 }
@@ -4908,7 +4910,7 @@ header.main-header .header-sticky.active{
 		padding: 190px 0 100px;
 		min-height: auto;
 	}
-	
+
 	.hero.hero-slider-layout .hero-pagination{
 		bottom: 30px;
 		padding-left: 15px;
@@ -5328,11 +5330,11 @@ header.main-header .header-sticky.active{
 	.scrolling-ticker-image{
 		transform: translateY(30px);
 	}
-	
+
 	.scrolling-ticker-images .scrolling-ticker-image:nth-child(even){
 		transform: translateY(-30px);
 	}
-	
+
 	.our-testimonials{
 		padding: 25px 0;
 	}
@@ -5482,7 +5484,7 @@ header.main-header .header-sticky.active{
     .footer-social-links ul li{
         margin-right: 10px;
     }
-    
+
     .footer-links{
         margin-bottom: 30px;
     }
@@ -5534,7 +5536,7 @@ header.main-header .header-sticky.active{
 	.page-header{
 		padding: 170px 0 80px;
 	}
-	
+
 	.page-header-box h1{
 		font-size: 45px;
 		margin-bottom: 5px;
@@ -5770,7 +5772,7 @@ header.main-header .header-sticky.active{
     .sidebar-cta-image figure{
         border-radius: 20px;
     }
-    
+
     .sidebar-cta-image img{
         aspect-ratio: 1 / 0.5;
         border-radius: 20px;
@@ -5904,7 +5906,7 @@ header.main-header .header-sticky.active{
 	.post-single-meta ol li i{
 		font-size: 16px;
 	}
-	
+
 	.post-image{
 		margin-bottom: 20px;
 	}
@@ -5913,7 +5915,7 @@ header.main-header .header-sticky.active{
 	.post-image img{
 		border-radius: 20px;
 	}
-		
+
 	.post-entry h1,
 	.post-entry h2,
 	.post-entry h3,
@@ -6074,13 +6076,13 @@ header.main-header .header-sticky.active{
         height: 260px;
         width: 180px;
     }
-    
+
     .page-faqs::after{
         bottom: -40px;
         height: 170px;
         width: 208px;
     }
-	
+
 	.page-faqs-catagery .page-faq-accordion{
 		margin-bottom: 40px;
 	}
@@ -6452,7 +6454,7 @@ header.main-header .header-sticky.active{
 	.scrolling-ticker-image{
 		transform: translateY(25px);
 	}
-	
+
 	.scrolling-ticker-images .scrolling-ticker-image:nth-child(even){
 		transform: translateY(-25px);
 	}
@@ -6709,7 +6711,7 @@ header.main-header .header-sticky.active{
 	.team-member-item .team-body{
 		width: 100%;
 	}
-	
+
 	.team-image a,
 	.team-image figure,
 	.team-image img{
@@ -6747,14 +6749,14 @@ header.main-header .header-sticky.active{
         left: -50px;
         height: 200px;
         width: 138px;
-    }    
-    
+    }
+
     .page-service-single::before{
         left: -50px;
         height: 200px;
         width: 138px;
     }
-    
+
     .page-service-single::after{
         top: 50%;
         height: 135px;
@@ -6850,7 +6852,7 @@ header.main-header .header-sticky.active{
         height: 200px;
         width: 138px;
     }
-    
+
     .page-single-post::after{
         top: 50%;
         height: 135px;
@@ -6860,20 +6862,20 @@ header.main-header .header-sticky.active{
 	.post-image img{
         aspect-ratio: 1 / 0.7;
     }
-    
+
     .post-entry blockquote{
         background-position: 15px 15px;
         padding: 60px 15px 15px 15px;
     }
-    
+
     .post-entry blockquote p{
         font-size: 16px;
     }
-    
+
     .post-entry h2{
         font-size: 26px;
     }
-    
+
     .tag-links{
         font-size: 18px;
     }
@@ -6883,7 +6885,7 @@ header.main-header .header-sticky.active{
         height: 200px;
         width: 138px;
     }
-    
+
     .page-team-single::after{
         top: 50%;
         height: 135px;
@@ -6932,7 +6934,7 @@ header.main-header .header-sticky.active{
         height: 200px;
         width: 138px;
     }
-    
+
     .page-testimonials::before{
         left: -50px;
         height: 200px;
@@ -6948,7 +6950,7 @@ header.main-header .header-sticky.active{
         height: 200px;
         width: 138px;
     }
-    
+
     .page-faqs::after{
         top: 50%;
         height: 135px;
@@ -6958,7 +6960,7 @@ header.main-header .header-sticky.active{
 	.contact-info-list{
 		gap: 20px;
 	}
-	
+
 	.contact-info-item{
 		width: 100%;
 	}

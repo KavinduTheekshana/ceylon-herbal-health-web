@@ -74,7 +74,7 @@
 
                        <!-- About Content Button Start -->
                        <div class="about-content-btn wow fadeInUp" data-wow-delay="0.8s">
-                           <a href="about.html" class="btn-default">more about us</a>
+                           <a href="/about" class="btn-default">more about us</a>
                        </div>
                        <!-- About Content Button End -->
                    </div>

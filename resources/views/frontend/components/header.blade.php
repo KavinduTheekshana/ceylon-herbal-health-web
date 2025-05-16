@@ -14,12 +14,12 @@
                     <div class="nav-menu-wrapper">
                         <ul class="navbar-nav mr-auto" id="menu">
 
-                            <li class="nav-item"><a class="nav-link" href="about.html">Home</a>
-                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
+                            <li class="nav-item"><a class="nav-link" href="/">Home</a>
+                                <li class="nav-item"><a class="nav-link" href="/about">About Us</a>
                             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                             <li class="nav-item"><a class="nav-link" href="blog.html">Faq's</a></li>
 
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
                             <li class="nav-item highlighted-menu"><a class="nav-link" href="book-appointment.html">Book Appointment</a></li>
                         </ul>
                     </div>

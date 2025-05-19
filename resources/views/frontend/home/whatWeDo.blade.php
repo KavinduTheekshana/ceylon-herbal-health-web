@@ -6,7 +6,7 @@
                 <!-- What We Image Start -->
                 <div class="what-we-image">
                     <figure>
-                        <img src={{ 'frontend/images/what-we-image.png' }} alt="">
+                        <img src={{ 'frontend/images/what-we-image.jpg' }} alt="">
 
 
                     </figure>

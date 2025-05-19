@@ -37,12 +37,11 @@
                     <!-- Why Choose Item Start -->
                     <div class="why-choose-item wow fadeInUp">
                         <div class="icon-box">
-                            <img src={{'frontend/images/icon-why-choose-item-1.svg'}} alt="">
+                            <img src={{'frontend/images/icon-why-choose-item.svg'}} alt="">
                         </div>
                         <div class="why-choose-item-content">
                             <h3>Ancient Wisdom, Modern Application</h3>
-                            <p>Achieve optimal wellness through carefully formulated herbal remedies designed to restore
-                                natural balance, enhance immunity, and promote holistic healing.</p>
+                            <p>Rediscover balance and immunity with time-tested Ceylon herbal remedies.</p>
                         </div>
                     </div>
                     <!-- Why Choose Item End -->
@@ -50,12 +49,11 @@
                     <!-- Why Choose Item Start -->
                     <div class="why-choose-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="icon-box">
-                            <img src={{'frontend/images/icon-why-choose-item-2.svg'}} alt="">
+                            <img src={{'frontend/images/icon-why-choose-item.svg'}} alt="">
                         </div>
                         <div class="why-choose-item-content">
                             <h3>Personalized Healing Approach</h3>
-                            <p>Experience treatments uniquely tailored to your body's needs, combining traditional
-                                Ceylon herbalism with contemporary wellness practices for comprehensive care.</p>
+                            <p>Tailored treatments blending tradition and modern wellness for total well-being.</p>
                         </div>
                     </div>
                     <!-- Why Choose Item End -->

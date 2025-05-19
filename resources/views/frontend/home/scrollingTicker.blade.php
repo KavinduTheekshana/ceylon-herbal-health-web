@@ -34,7 +34,7 @@
         </div>
         <!-- Scrolling Content End -->
 
-        <!-- Scrolling Ticker Images Start -->
+        {{-- <!-- Scrolling Ticker Images Start -->
         <div class="scrolling-ticker-images">
             <!-- Scrolling Ticker Image Start -->
             <div class="scrolling-ticker-image">
@@ -76,7 +76,7 @@
             </div>
             <!-- Scrolling Ticker Image End -->
         </div>
-        <!-- Scrolling Ticker Images End -->
+        <!-- Scrolling Ticker Images End --> --}}
     </div>
     <!-- Scrolling Ticker Box End -->
 </div>

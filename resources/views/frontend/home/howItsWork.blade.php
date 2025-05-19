@@ -8,8 +8,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">how it work</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Discover our healing journey through yoga,
-                            meditation, and <span>herbal therapies</span></span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Discover our healing journey through
+                            <span>herbal therapies</span></span></h2>
                     </div>
                     <!-- Section Title End -->
 
@@ -21,10 +21,9 @@
                                 <h2>01</h2>
                             </div>
                             <div class="how-work-step-content">
-                                <h3>Choose Your Healing Path</h3>
-                                <p>FBegin by selecting the wellness experience that suits your needs—be it herbal
-                                    therapy, guided meditation, or a restorative yoga practice. Our team is here to
-                                    guide you toward the right path for your body and mind.</p>
+                                <h3>Book Your Appointment</h3>
+                                <p>Choose your desired treatment and book your appointment online or by phone. Our
+                                    friendly team will confirm your booking and guide you if needed.</p>
                             </div>
                         </div>
                         <!-- How Work Step End -->
@@ -35,10 +34,9 @@
                                 <h2>02</h2>
                             </div>
                             <div class="how-work-step-content">
-                                <h3>Schedule Your Personalized Session</h3>
-                                <p>Easily book a convenient time for your session. Whether in-person or online, our
-                                    skilled practitioners ensure you receive a tailored experience that promotes deep
-                                    relaxation and natural healing.</p>
+                                <h3>Consult with Our Experts</h3>
+                                <p>On your visit, meet with our qualified Ayurvedic doctors or therapists. They’ll
+                                    understand your needs and recommend the best treatment for you.</p>
                             </div>
                         </div>
                         <!-- How Work Step End -->
@@ -49,10 +47,9 @@
                                 <h2>03</h2>
                             </div>
                             <div class="how-work-step-content">
-                                <h3>Embrace Daily Balance and Wellness</h3>
-                                <p>Incorporate our recommended practices and herbal remedies into your daily life. With
-                                    consistent care, you'll experience lasting rejuvenation, improved energy, and a
-                                    deeper connection to your natural wellbeing.</p>
+                                <h3>Experience Natural Healing</h3>
+                                <p>Relax and enjoy your personalized Ayurvedic treatment. Feel the natural balance and
+                                    healing that comes with traditional herbal care.</p>
                             </div>
                         </div>
                         <!-- How Work Step End -->

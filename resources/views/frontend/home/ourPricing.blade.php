@@ -60,7 +60,7 @@
 
                           <!-- Pricing Button Start -->
                           <div class="pricing-btn">
-                              <a href="contact.html" class="btn-default">get started now</a>
+                              <a href="/contact" class="btn-default">get started now</a>
                           </div>
                           <!-- Pricing Button End -->
                       </div>
@@ -105,7 +105,7 @@
 
                           <!-- Pricing Button Start -->
                           <div class="pricing-btn">
-                              <a href="contact.html" class="btn-default btn-highlighted">get started now</a>
+                              <a href="/contact" class="btn-default btn-highlighted">get started now</a>
                           </div>
                           <!-- Pricing Button End -->
                       </div>
@@ -150,7 +150,7 @@
 
                           <!-- Pricing Button Start -->
                           <div class="pricing-btn">
-                              <a href="contact.html" class="btn-default">get started now</a>
+                              <a href="/contact" class="btn-default">get started now</a>
                           </div>
                           <!-- Pricing Button End -->
                       </div>

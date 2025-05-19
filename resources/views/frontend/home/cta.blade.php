@@ -13,7 +13,7 @@
                 <div class="col-lg-3">
                     <!-- Section Button Start -->
                     <div class="section-btn wow fadeInUp">
-                        <a href="contact.html" class="btn-default btn-highlighted">read more</a>
+                        <a href="/contact" class="btn-default btn-highlighted">read more</a>
                     </div>
                     <!-- Section Button End -->
                 </div>

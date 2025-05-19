@@ -136,7 +136,7 @@
                         </div>
                         <div class="faqs-contact-box-content">
                             <h3>Still have Question?</h3>
-                            <p><a href="0761852398"></a>(0) - 0761-852-398</p>
+                            <p><a href="07349925427"></a>+44 7349 925427</p>
                         </div>
                     </div>
                     <!-- Faqs Contact Box End -->

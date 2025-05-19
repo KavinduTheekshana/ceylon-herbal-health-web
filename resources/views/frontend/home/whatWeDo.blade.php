@@ -44,7 +44,7 @@
 
                     <!-- What We Button Start -->
                     <div class="what-we-btn wow fadeInUp" data-wow-delay="0.6s">
-                        <a href="contact.html" class="btn-default">contact now</a>
+                        <a href="/contact" class="btn-default">contact now</a>
                     </div>
                     <!-- What We Button End -->
                 </div>

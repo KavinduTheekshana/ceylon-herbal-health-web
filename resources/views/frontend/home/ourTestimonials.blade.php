@@ -31,7 +31,7 @@
                                     your skill level, this is the perfect.</p>
                             </div>
                             <div class="testimonial-review-btn">
-                                <a href="contact.html"><img src={{ 'frontend/images/arrow-white.svg' }}
+                                <a href="/contact"><img src={{ 'frontend/images/arrow-white.svg' }}
                                         alt=""></a>
                             </div>
                         </div>

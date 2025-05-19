@@ -58,7 +58,8 @@
                     <p><span>Free Consultation</span>Experience authentic Ayurveda with a personalized approach. <a
                             href="">Book Your Session</a></p>
 
-                <!-- Section Footer Text End -->
+                    <!-- Section Footer Text End -->
+                </div>
             </div>
         </div>
     </div>

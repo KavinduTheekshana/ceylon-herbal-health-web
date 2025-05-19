@@ -36,7 +36,7 @@
                     <h3>Quick link</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About us</a></li>
+                        <li><a href="/about">About us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="blog.html">Blogs</a></li>
                     </ul>
@@ -63,7 +63,7 @@
                 <div class="footer-links footer-contact-links">
                     <h3>Contact</h3>
                     <ul>
-                        <li><a href="tel:761852398">(0) - 0761-852-398</a></li>
+                        <li><a href="tel:7349925427">+44 7349 925427</a></li>
                         <li><a href="info@domainname.com">info@domainname.com</a></li>
                         <li>123 High Street LN1 1AB United Kingdom</li>
                     </ul>

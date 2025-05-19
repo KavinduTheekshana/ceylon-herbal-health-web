@@ -36,6 +36,11 @@
     <link href="{{ asset('frontend/css/main.css') }}" rel="stylesheet" media="screen">
     {{-- Custom css  --}}
     <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet" media="screen">
+
+    <!-- Swiper CSS (via CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+
     @stack('styles')
     @vite(['', 'resources/js/app.js'])
 </head>
@@ -55,7 +60,36 @@
     @include('frontend.components.header')
     @yield('content')
     @include('frontend.components.footer')
+    {{-- SwiperJs --}}
+    <!-- Swiper JS (via CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
+    <!-- Swiper Init Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.our-testimonial-box', {
+                slidesPerView: 1,
+                loop: true,
+                effect: 'fade',
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
+                },
+                fadeEffect: {
+                    crossFade: true
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                }
+            });
+            console.log("Swiper initialized:", swiper);
+        });
+    </script>
 
 
     <!-- Jquery Library File -->
@@ -67,7 +101,7 @@
     <!-- SlickNav js file -->
     <script src="{{ asset('frontend/js/jquery.slicknav.js') }}"></script>
     <!-- Swiper js file -->
-    <script src="{{ asset('frontend/js/swiper-bundle.min.js') }}"></script>
+    {{-- <script src="{{ asset('frontend/js/swiper-bundle.min.js') }}"></script> --}}
     <!-- Counter js file -->
     <script src="{{ asset('frontend/js/jquery.waypoints.min.js') }}"></script>
     <script src="{{ asset('frontend/js/jquery.counterup.min.js') }}"></script>

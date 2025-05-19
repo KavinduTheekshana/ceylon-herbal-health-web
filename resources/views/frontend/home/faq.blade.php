@@ -6,8 +6,8 @@
                 <!-- Section Title Start -->
                 <div class="section-title">
                     <h3 class="wow fadeInUp">FAQs</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque">Got questions? We’re here to help you feel
-                        confident on your healing journey.</span></h2>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">Got questions? We’re here to help you <span>feel
+                            confident.</span></h2>
                 </div>
                 <!-- Section Title End -->
             </div>

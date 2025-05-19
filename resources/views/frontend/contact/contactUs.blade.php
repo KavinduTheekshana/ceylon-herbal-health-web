@@ -27,7 +27,7 @@
                             <!-- Contact Item Content Start -->
                             <div class="contact-item-content">
                                 <h3>contact us</h3>
-                                <p><a href="tel:761853398">+(1) 761-853-398</a></p>
+                                <p><a href="tel:7349925427">+44 7349 925427</a></p>
                             </div>
                             <!-- Contact Item Content End -->
                         </div>

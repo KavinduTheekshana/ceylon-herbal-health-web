@@ -1,12 +1,12 @@
 <!-- What We Do Section Start -->
 <div class="what-we-do">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center mb-5">
             <div class="col-lg-6 order-lg-1 order-2">
                 <!-- What We Image Start -->
                 <div class="what-we-image">
                     <figure>
-                        <img src={{ 'frontend/images/what-we-image.jpg' }} alt="">
+                        <img src={{ 'frontend/images/what-we-benefit-image.jpg' }} alt="">
 
 
                     </figure>
@@ -50,7 +50,8 @@
                 </div>
                 <!-- What We Content End -->
             </div>
-
+        </div>
+        <div class="row align-items-center">
             <div class="col-lg-12 order-3">
                 <!-- What We Benefits Box Start -->
                 <div class="what-we-benefits-box">
@@ -59,7 +60,7 @@
                         <!-- What We Item Start -->
                         <div class="what-we-item wow fadeInUp">
                             <div class="icon-box">
-                                <img src={{ 'frontend/images/icon-what-we-item-1.svg' }} alt="">
+                                <img src={{ 'frontend/images/icon-about-benefit-1-light.svg' }} class="w-100" alt="">
                             </div>
                             <div class="what-we-item-content">
                                 <h3>Traditional Herbal Consultations</h3>
@@ -71,7 +72,7 @@
                         <!-- What We Item Start -->
                         <div class="what-we-item wow fadeInUp" data-wow-delay="0.2s">
                             <div class="icon-box">
-                                <img src={{ 'frontend/images/icon-what-we-item-2.svg' }} alt="">
+                                <img src={{ 'frontend/images/icon-about-benefit-1-light.svg' }} class="w-100" alt="">
                             </div>
                             <div class="what-we-item-content">
                                 <h3>Rejuvenating Herbal Therapies</h3>
@@ -83,7 +84,7 @@
                         <!-- What We Item Start -->
                         <div class="what-we-item wow fadeInUp" data-wow-delay="0.4s">
                             <div class="icon-box">
-                                <img src={{ 'frontend/images/icon-what-we-item-3.svg' }} alt="">
+                                <img src={{ 'frontend/images/icon-about-benefit-1-light.svg' }} class="w-100" alt="">
                             </div>
                             <div class="what-we-item-content">
                                 <h3>Custom Herbal Formulations</h3>
@@ -95,7 +96,7 @@
                         <!-- What We Item Start -->
                         <div class="what-we-item wow fadeInUp" data-wow-delay="0.6s">
                             <div class="icon-box">
-                                <img src={{ 'frontend/images/icon-what-we-item-4.svg' }} alt="">
+                                <img src={{ 'frontend/images/icon-about-benefit-1-light.svg' }} class="w-100" alt="">
                             </div>
                             <div class="what-we-item-content">
                                 <h3>Holistic Wellness Programs</h3>
@@ -109,7 +110,7 @@
                     <!-- What We Benefits Image Start -->
                     <div class="what-we-benefit-image">
                         <figure class="image-anime">
-                            <img src={{ 'frontend/images/what-we-benefit-image.jpg' }} alt="">
+                            <img src={{ 'frontend/images/massage-concept-with-woman.jpg' }} alt="">
                         </figure>
                     </div>
                     <!-- What We Benefits Image End -->

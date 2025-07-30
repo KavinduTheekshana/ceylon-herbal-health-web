@@ -15,7 +15,7 @@ class AppointmentController extends Controller
      */
     public function create()
     {
-        $services = Service::active()
+        $services = Service::where('is_active', true)
             ->orderBy('order')
             ->orderBy('title')
             ->get();
@@ -28,6 +28,12 @@ class AppointmentController extends Controller
      */
     public function store(Request $request)
     {
+        Log::info('Appointment form submitted', [
+            'data' => $request->all(),
+            'url' => $request->url(),
+            'method' => $request->method()
+        ]);
+
         // Validate the form data
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
@@ -46,7 +52,12 @@ class AppointmentController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return back()
+            Log::warning('Appointment validation failed', [
+                'errors' => $validator->errors()->toArray(),
+                'input' => $request->all()
+            ]);
+
+            return redirect()->back()
                 ->withErrors($validator)
                 ->withInput()
                 ->with('error', 'Please check the form for errors and try again.');
@@ -61,7 +72,13 @@ class AppointmentController extends Controller
                 ->first();
 
             if ($existingAppointment) {
-                return back()
+                Log::info('Duplicate appointment attempt', [
+                    'email' => $request->email,
+                    'date' => $request->preferred_date,
+                    'time' => $request->preferred_time
+                ]);
+
+                return redirect()->back()
                     ->withInput()
                     ->with('error', 'You already have an appointment request for this date and time. Please choose a different time or contact us directly.');
             }
@@ -80,6 +97,11 @@ class AppointmentController extends Controller
                 'status' => 'pending',
             ]);
 
+            Log::info('Appointment created successfully', [
+                'appointment_id' => $appointment->id,
+                'email' => $appointment->email
+            ]);
+
             // Send confirmation email to patient
             $this->sendPatientConfirmation($appointment);
 
@@ -94,12 +116,13 @@ class AppointmentController extends Controller
                 ]);
 
         } catch (\Exception $e) {
-            Log::error('Appointment booking error: ' . $e->getMessage(), [
-                'request_data' => $request->all(),
-                'exception' => $e
+            Log::error('Appointment booking error', [
+                'message' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(),
+                'request_data' => $request->all()
             ]);
             
-            return back()
+            return redirect()->back()
                 ->withInput()
                 ->with('error', 'There was an error processing your appointment. Please try again or call us directly at +44 73 499 25427.');
         }
@@ -140,9 +163,10 @@ class AppointmentController extends Controller
             ]);
 
         } catch (\Exception $e) {
-            Log::error('Failed to send patient confirmation email: ' . $e->getMessage(), [
+            Log::error('Failed to send patient confirmation email', [
                 'appointment_id' => $appointment->id,
-                'email' => $appointment->email
+                'email' => $appointment->email,
+                'error' => $e->getMessage()
             ]);
         }
     }
@@ -175,8 +199,9 @@ class AppointmentController extends Controller
             ]);
 
         } catch (\Exception $e) {
-            Log::error('Failed to send admin notification email: ' . $e->getMessage(), [
-                'appointment_id' => $appointment->id
+            Log::error('Failed to send admin notification email', [
+                'appointment_id' => $appointment->id,
+                'error' => $e->getMessage()
             ]);
         }
     }

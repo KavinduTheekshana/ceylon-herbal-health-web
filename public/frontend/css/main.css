@@ -7549,7 +7549,7 @@ header.main-header .header-sticky.active {
 }
 
 .special-offer {
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary-color));
+    background: var(--accent-secondary-color);
     border-radius: 15px;
     padding: 25px;
     text-align: center;

@@ -99,7 +99,7 @@
                                             </div>
 
                                             <div class="form-actions">
-                                                <button type="button" class="btn-default btn-next">Continue <i class="fa-solid fa-arrow-right"></i></button>
+                                                <button type="button" class="btn-default btn-next">Continue &nbsp &nbsp &nbsp</button>
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +141,7 @@
 
                                             <div class="form-actions">
                                                 <button type="button" class="btn-secondary btn-back"><i class="fa-solid fa-arrow-left"></i> Back</button>
-                                                <button type="button" class="btn-default btn-next">Continue <i class="fa-solid fa-arrow-right"></i></button>
+                                                <button type="button" class="btn-default btn-next">Continue &nbsp &nbsp &nbsp </button>
                                             </div>
                                         </div>
                                     </div>
@@ -190,7 +190,7 @@
                                             <div class="form-actions">
                                                 <button type="button" class="btn-secondary btn-back"><i class="fa-solid fa-arrow-left"></i> Back</button>
                                                 <button type="submit" class="btn-default btn-submit">
-                                                    <i class="fa-solid fa-calendar-check"></i> Book Appointment
+                                                    <i class="fa-solid fa-calendar-check"></i> Book Appointment &nbsp &nbsp &nbsp
                                                 </button>
                                             </div>
                                         </div>
@@ -236,7 +236,7 @@
                                     </ul>
                                 </div>
 
-                                <!-- Special Offer -->
+                               <!-- Special Offer -->
                                 <div class="special-offer">
                                     <div class="offer-icon">
                                         <i class="fa-solid fa-gift"></i>
@@ -257,7 +257,7 @@
                                         </a>
                                         <a href="https://wa.me/447349925427?text=Hello! I would like to book an appointment for Ayurvedic treatment." class="contact-btn whatsapp-btn" target="_blank">
                                             <i class="fa-brands fa-whatsapp"></i>
-                                            <span>WhatsApp<br><strong>Chat Now</strong></span>
+                                             <span>WhatsApp<br><strong>Chat Now</strong></span>
                                         </a>
                                     </div>
                                 </div>

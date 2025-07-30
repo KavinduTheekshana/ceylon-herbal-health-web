@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <!-- Logo Start -->
-                <a class="navbar-brand" href="{{ route('/') }}">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img src="{{ asset('frontend/images/logoweb.svg')}}" alt="Logo" width="200">
                 </a>
                 <!-- Logo End -->

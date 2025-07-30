@@ -1,7 +1,10 @@
+{{-- File: resources/views/frontend/home/index.blade.php --}}
+
 @extends('layouts.frontend')
 
 @section('content')
     @include('frontend.home.slider')
+    @include('frontend.home.appointmentBooking')  {{-- NEW: Added appointment booking section --}}
     @include('frontend.home.about')
     @include('frontend.home.services')
     @include('frontend.home.whatWeDo')

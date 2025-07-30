@@ -190,3 +190,6 @@ Route::get('/{page:slug}', [PageController::class, 'show'])->name('pages.show');
 // Route::fallback(function () {
 //     return view('frontend.errors.404');
 // });
+
+Route::get('/api/available-slots/{date}', [AppointmentController::class, 'getAvailableSlots'])
+    ->name('api.available-slots');

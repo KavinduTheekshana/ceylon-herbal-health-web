@@ -363,18 +363,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Service selection enhancement
-    const serviceOptions = document.querySelectorAll('input[name="service_id"]');
-    serviceOptions.forEach(option => {
-        option.addEventListener('change', function() {
-            // Auto-advance to next step after service selection
-            setTimeout(() => {
-                if (document.querySelector('.btn-next')) {
-                    document.querySelector('.btn-next').click();
-                }
-            }, 500);
-        });
-    });
+  
 
     // Date input minimum date
     const dateInput = document.getElementById('preferred_date');

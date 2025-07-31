@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <!-- Contect Us Content Start -->
+                <!-- Contact Us Content Start -->
                 <div class="contact-us-content">
                     <!-- Section Title Start -->
                     <div class="section-title">
@@ -20,14 +20,14 @@
                         <div class="contact-info-item wow fadeInUp">
                             <!-- Icon Box Start -->
                             <div class="icon-box">
-                                <img src="images/icon-phone.svg" alt="">
+                                <img src="{{ asset('frontend/images/icon-phone.svg') }}" alt="Phone">
                             </div>
                             <!-- Icon Box End -->
 
                             <!-- Contact Item Content Start -->
                             <div class="contact-item-content">
                                 <h3>contact us</h3>
-                                <p><a href="tel:7349925427">+44 7349 925427</a></p>
+                                <p><a href="tel:+447349925427">+44 7349 925427</a></p>
                             </div>
                             <!-- Contact Item Content End -->
                         </div>
@@ -37,14 +37,14 @@
                         <div class="contact-info-item wow fadeInUp" data-wow-delay="0.2s">
                             <!-- Icon Box Start -->
                             <div class="icon-box">
-                                <img src="images/icon-mail.svg" alt="">
+                                <img src="{{ asset('frontend/images/icon-mail.svg') }}" alt="Email">
                             </div>
                             <!-- Icon Box End -->
 
                             <!-- Contact Item Content Start -->
                             <div class="contact-item-content">
                                 <h3>email us</h3>
-                                <p><a href="mailto:info@domain.com">info@domain.com</a></p>
+                                <p><a href="mailto:info@ayurveda-wellness.com">info@ayurveda-wellness.com</a></p>
                             </div>
                             <!-- Contact Item Content End -->
                         </div>
@@ -54,14 +54,14 @@
                         <div class="contact-info-item wow fadeInUp" data-wow-delay="0.4s">
                             <!-- Icon Box Start -->
                             <div class="icon-box">
-                                <img src="images/icon-location.svg" alt="">
+                                <img src="{{ asset('frontend/images/icon-location.svg') }}" alt="Location">
                             </div>
                             <!-- Icon Box End -->
 
                             <!-- Contact Item Content Start -->
                             <div class="contact-item-content">
                                 <h3>location</h3>
-                                <p>123 High Street 123</p>
+                                <p>123 High Street, London, UK</p>
                             </div>
                             <!-- Contact Item Content End -->
                         </div>
@@ -71,14 +71,14 @@
                         <div class="contact-info-item wow fadeInUp" data-wow-delay="0.6s">
                             <!-- Icon Box Start -->
                             <div class="icon-box">
-                                <img src="images/icon-clock.svg" alt="">
+                                <img src="{{ asset('frontend/images/icon-clock.svg') }}" alt="Hours">
                             </div>
                             <!-- Icon Box End -->
 
                             <!-- Contact Item Content Start -->
                             <div class="contact-item-content">
-                                <h3>open</h3>
-                                <p>Mon-Sat(09 - 21:00)</p>
+                                <h3>open hours</h3>
+                                <p>Mon-Sat (09:00 - 21:00)</p>
                             </div>
                             <!-- Contact Item Content End -->
                         </div>
@@ -90,15 +90,15 @@
                     <div class="contact-social-list wow fadeInUp" data-wow-delay="0.8s">
                         <h3>Follow On Social :</h3>
                         <ul>
-                            <li><a href="#" class="social-icon"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                            <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" class="social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            <li><a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
                         </ul>
                     </div>
                     <!-- Contact Social List End -->
                 </div>
-                <!-- Contect Us Content End -->
+                <!-- Contact Us Content End -->
             </div>
 
             <div class="col-lg-6">
@@ -112,41 +112,77 @@
 
                     <!-- Contact Form Start -->
                     <div class="contact-form">
-                        <form id="contactForm" action="#" method="POST" data-toggle="validator"
-                            class="wow fadeInUp" data-wow-delay="0.2s">
+                        <form id="contactForm" action="{{ route('contact.store') }}" method="POST" 
+                              class="wow fadeInUp" data-wow-delay="0.2s" novalidate>
+                            @csrf
                             <div class="row">
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="fname" class="form-control" id="fname"
-                                        placeholder="First name" required>
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" 
+                                           name="fname" 
+                                           class="form-control @error('fname') is-invalid @enderror" 
+                                           id="fname"
+                                           placeholder="First name" 
+                                           value="{{ old('fname') }}"
+                                           required>
+                                    @error('fname')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="lname" class="form-control" id="lname"
-                                        placeholder="Last name" required>
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" 
+                                           name="lname" 
+                                           class="form-control @error('lname') is-invalid @enderror" 
+                                           id="lname"
+                                           placeholder="Last name" 
+                                           value="{{ old('lname') }}"
+                                           required>
+                                    @error('lname')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="email" name ="email" class="form-control" id="email"
-                                        placeholder="E-mail" required>
-                                    <div class="help-block with-errors"></div>
+                                    <input type="email" 
+                                           name="email" 
+                                           class="form-control @error('email') is-invalid @enderror" 
+                                           id="email"
+                                           placeholder="E-mail" 
+                                           value="{{ old('email') }}"
+                                           required>
+                                    @error('email')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="phone" class="form-control" id="phone"
-                                        placeholder="Phone" required>
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" 
+                                           name="phone" 
+                                           class="form-control @error('phone') is-invalid @enderror" 
+                                           id="phone"
+                                           placeholder="Phone" 
+                                           value="{{ old('phone') }}">
+                                    @error('phone')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="form-group col-md-12 mb-5">
-                                    <textarea name="message" class="form-control" id="message" rows="3" placeholder="Write Message..."></textarea>
-                                    <div class="help-block with-errors"></div>
+                                    <textarea name="message" 
+                                              class="form-control @error('message') is-invalid @enderror" 
+                                              id="message" 
+                                              rows="4" 
+                                              placeholder="Write your message..."
+                                              required>{{ old('message') }}</textarea>
+                                    @error('message')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn-default">book An appointment</button>
-                                    <div id="msgSubmit" class="h3 hidden"></div>
+                                    <button type="submit" class="btn-default" id="contactSubmitBtn">
+                                        <span class="btn-text">Send Message</span>
+                                    </button>
                                 </div>
                             </div>
                         </form>

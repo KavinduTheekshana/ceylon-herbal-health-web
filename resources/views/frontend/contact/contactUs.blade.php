@@ -113,7 +113,7 @@
                     <!-- Contact Form Start -->
                     <div class="contact-form">
                         <form id="contactForm" action="{{ route('contact.store') }}" method="POST" 
-                              class="wow fadeInUp" data-wow-delay="0.2s" novalidate>
+                              class="wow fadeInUp" data-wow-delay="0.2s">
                             @csrf
                             <div class="row">
                                 <div class="form-group col-md-6 mb-4">

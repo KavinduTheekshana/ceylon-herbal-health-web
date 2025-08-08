@@ -9,6 +9,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Page Title -->
     <title>Restraint - Yoga & Meditation HTML Template</title>
     <!-- Favicon Icon -->

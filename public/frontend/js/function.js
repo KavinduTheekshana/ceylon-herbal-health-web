@@ -217,14 +217,22 @@
 		}
 	});
 
-	/* Contact form validation */
+	/* Contact form validation - UPDATED FOR LARAVEL */
 	var $contactform = $("#contactForm");
-	$contactform.validator({focus: false}).on("submit", function (event) {
-		if (!event.isDefaultPrevented()) {
-			event.preventDefault();
-			submitForm();
-		}
-	});
+	
+	// Check if this is a Laravel form (has action attribute pointing to /contact)
+	if ($contactform.length && $contactform.attr('action') && $contactform.attr('action').includes('/contact')) {
+		// Skip the validator for Laravel forms - let them submit normally
+		console.log('Laravel contact form detected - using standard submission');
+	} else {
+		// Original theme functionality for non-Laravel forms
+		$contactform.validator({focus: false}).on("submit", function (event) {
+			if (!event.isDefaultPrevented()) {
+				event.preventDefault();
+				submitForm();
+			}
+		});
+	}
 
 	function submitForm(){
 		/* Ajax call to submit form */

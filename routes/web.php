@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\FaqController;
 use Illuminate\Support\Facades\Route;
 
 // =============================================================================
@@ -65,13 +66,9 @@ Route::get('/news', [BlogController::class, 'index'])->name('news');
 // =============================================================================
 
 // FAQ pages (you can create these controllers later)
-Route::get('/faq', function () {
-    return view('frontend.faq.index');
-})->name('faq');
-
-Route::get('/faqs', function () {
-    return view('frontend.faq.index');
-})->name('faqs');
+// FAQ pages
+Route::get('/faq', [FaqController::class, 'index'])->name('faq');
+Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
 
 // =============================================================================
 // STATIC/CMS PAGES

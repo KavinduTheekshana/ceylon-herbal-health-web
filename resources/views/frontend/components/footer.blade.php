@@ -45,17 +45,18 @@
             </div>
 
             <div class="col-lg-2 col-md-4">
-                <!-- Footer Links Start -->
-                <div class="footer-links">
-                    <h3>services</h3>
-                    <ul>
-                        <li><a href="service-single.html">Beginner yoga classes</a></li>
-                        <li><a href="service-single.html">Stress relief sessions</a></li>
-                        <li><a href="service-single.html">Mindful meditation</a></li>
-                        <li><a href="service-single.html"> Restorative Yoga</a></li>
-                    </ul>
-                </div>
-                <!-- Footer Links End -->
+              <!-- Footer Links Start -->
+<div class="footer-links">
+    <h3>Quick link</h3>
+    <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('about') }}">About us</a></li>
+        <li><a href="{{ route('services.index') }}">Services</a></li>
+        <li><a href="{{ route('blog.index') }}">Blog</a></li>
+        <li><a href="{{ route('contact') }}">Contact</a></li>
+    </ul>
+</div>
+<!-- Footer Links End -->
             </div>
 
             <div class="col-lg-3 col-md-5">

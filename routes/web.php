@@ -8,6 +8,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 // =============================================================================
@@ -191,3 +192,7 @@ Route::get('/{page:slug}', [PageController::class, 'show'])->name('pages.show');
 
 Route::get('/api/available-slots/{date}', [AppointmentController::class, 'getAvailableSlots'])
     ->name('api.available-slots');
+
+    // Testimonials page
+Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials');
+Route::get('/reviews', [TestimonialController::class, 'index'])->name('reviews');

@@ -35,7 +35,7 @@
                     <!-- Why Choose Item Start -->
                     <div class="why-choose-item wow fadeInUp">
                         <div class="icon-box">
-                            <img src="{{ asset('frontend/images/icon-why-choose-item-1.svg') }}" alt="">
+                            <img src="{{ asset('frontend/images/icon-why-choose-item.svg') }}" alt="">
                         </div>
                         <div class="why-choose-item-content">
                             <h3>Yoga for Balance</h3>
@@ -47,7 +47,7 @@
                     <!-- Why Choose Item Start -->
                     <div class="why-choose-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="icon-box">
-                            <img src="{{ asset('frontend/images/icon-why-choose-item-2.svg') }}" alt="">
+                            <img src="{{ asset('frontend/images/icon-why-choose-item.svg') }}" alt="">
                         </div>
                         <div class="why-choose-item-content">
                             <h3>Inner Peace Workshops</h3>

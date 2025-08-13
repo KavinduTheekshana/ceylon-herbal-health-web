@@ -145,10 +145,10 @@
            <div class="hero-pagination"></div>
        </div>
        <!-- Down Arrow Circle Start -->
-       <div class="down-arrow-circle">
+       <!-- <div class="down-arrow-circle">
            <a href="#home-about"><img src="images/down-circle.svg" alt=""><i
                    class="fa-solid fa-arrow-down"></i></a>
-       </div>
+       </div> -->
        <!-- Down Arrow Circle End -->
    </div>
    <!-- Hero Section End -->

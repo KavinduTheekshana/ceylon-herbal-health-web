@@ -1,10 +1,10 @@
-   <!-- About Us Section Start -->
-   <div class="about-us" id="home-about">
+<!-- About Us Section Start -->
+   <div class="about-us overflow-hidden" id="home-about" style="overflow: hidden !important;">
        <div class="container">
            <div class="row align-items-center">
                <div class="col-lg-6">
                    <!-- About Images Start -->
-                   <div class="about-images">
+                   <div class="about-images" style="overflow: hidden;">
                        <!-- About Image Start -->
                        <div class="about-image">
                            <figure>

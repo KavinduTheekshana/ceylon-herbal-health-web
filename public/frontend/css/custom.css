@@ -35,6 +35,27 @@ html {
     max-width: 100vw;
 }
 
+/* Left align hero content text */
+.hero-content .section-title,
+.hero-content .section-title h1,
+.hero-content .section-title h3,
+.hero-content .section-title p {
+    text-align: left !important;
+}
+
+/* Left align hero button */
+.hero-body,
+.hero-btn {
+    text-align: left !important;
+    justify-content: flex-start !important;
+}
+
+/* Remove column padding to align with container edge */
+.hero-slider-layout .col-lg-6 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 /* Fix for hero slider */
 .hero.hero-slider-layout {
     width: 100%;
@@ -86,17 +107,19 @@ html {
     display: block;
 }
 
-/* Pagination positioning fix */
+/* Pagination positioning fix - align with container */
 .hero.hero-slider-layout .hero-pagination {
     position: absolute;
     bottom: 50px;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: left;
-    padding-left: calc(((100vw - min(1300px, 100vw)) / 2) + 15px);
     z-index: 2;
     margin: 0;
+    max-width: 1300px;
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
     box-sizing: border-box;
 }
 
@@ -213,7 +236,7 @@ html {
    SECTION 7: UTILITY CLASSES
    =========================================== */
 
-/* Container adjustments */
+/* Container adjustments - match standard container */
 .hero-slider-layout .container {
     position: relative;
     z-index: 2;

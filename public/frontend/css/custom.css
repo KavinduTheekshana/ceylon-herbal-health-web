@@ -279,6 +279,20 @@ html {
 /* * {
     outline: 1px solid red !important;
 } */
+
+/* ===========================================
+   SECTION 9: FOOTER ALIGNMENT
+   =========================================== */
+
+/* Align footer about text with Quick link section */
+.footer-about .about-footer-content {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.footer-about .about-footer-content p {
+    text-align: left !important;
+}
  
 
 /* Mobile Menu Quick Fix */

@@ -8,7 +8,7 @@
                     <!-- Footer About Start -->
                     <div class="footer-about">
                         <div class="footer-logo">
-                            <img src="images/footer-logo.svg" alt="">
+                            <img src="{{ asset('frontend/images/footer-logo.svg') }}" alt="">
                         </div>
                         <div class="about-footer-content">
                             <p>Holistic practices for inner peace, focus, and overall well-being.</p>
@@ -19,10 +19,8 @@
                     <!-- Footer Social Links Start -->
                     <div class="footer-social-links">
                         <ul>
-                            <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/ceylonherbalhealth/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/ceylonherbalhealth" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                         </ul>
                     </div>
                     <!-- Footer Social Links End -->
@@ -35,10 +33,11 @@
                 <div class="footer-links">
                     <h3>Quick link</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="/about">About us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('about') }}">About us</a></li>
+                        <li><a href="{{ route('services.index') }}">Services</a></li>
+                        <li><a href="{{ route('faq') }}">FAQ's</a></li>
+                        <li><a href="{{ route('contact') }}">Contact</a></li>
                     </ul>
                 </div>
                 <!-- Footer Links End -->
@@ -47,13 +46,14 @@
             <div class="col-lg-2 col-md-4">
               <!-- Footer Links Start -->
 <div class="footer-links">
-    <h3>Quick link</h3>
+    <h3>Services</h3>
     <ul>
-        <li><a href="{{ route('home') }}">Home</a></li>
-        <li><a href="{{ route('about') }}">About us</a></li>
-        <li><a href="{{ route('services.index') }}">Services</a></li>
-        <li><a href="{{ route('blog.index') }}">Blog</a></li>
-        <li><a href="{{ route('contact') }}">Contact</a></li>
+        @php
+            $footerServices = \App\Models\Service::active()->orderBy('order')->limit(5)->get();
+        @endphp
+        @foreach($footerServices as $service)
+            <li><a href="{{ route('services.show', $service->slug) }}">{{ $service->title }}</a></li>
+        @endforeach
     </ul>
 </div>
 <!-- Footer Links End -->
@@ -64,9 +64,9 @@
                 <div class="footer-links footer-contact-links">
                     <h3>Contact</h3>
                     <ul>
-                        <li><a href="tel:7349925427">+44 7349 925427</a></li>
-                        <li><a href="info@domainname.com">info@domainname.com</a></li>
-                        <li>123 High Street LN1 1AB United Kingdom</li>
+                        <li><a href="tel:+447349925427">+44 73 499 25427</a></li>
+                        <li><a href="mailto:info@ceylonherbalhealth.co.uk">info@ceylonherbalhealth.co.uk</a></li>
+                        <li><a href="https://maps.app.goo.gl/2qai5iQOWTDrVISi6" target="_blank">View Location</a></li>
                     </ul>
                 </div>
                 <!-- Footer Contact Links End -->

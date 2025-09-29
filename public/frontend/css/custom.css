@@ -312,7 +312,27 @@ html {
     height: auto;
     filter: brightness(0) invert(1); /* Make logo white on dark background */
 }
- 
+
+/* ===========================================
+   SECTION 10: ABOUT US HALF CIRCLE FIX
+   =========================================== */
+
+/* Fix the cut-off half circle in about section */
+.about-us {
+    overflow: visible !important;
+    padding-bottom: 100px !important;
+}
+
+.about-images {
+    overflow: visible !important;
+    margin-bottom: 50px !important;
+}
+
+/* Extend the half circle to complete the shape */
+.about-images::before {
+    bottom: -50px !important;
+}
+
 
 /* Mobile Menu Quick Fix */
 @media only screen and (max-width: 991px) {

@@ -285,13 +285,32 @@ html {
    =========================================== */
 
 /* Align footer about text with Quick link section */
+.footer-about {
+    display: flex !important;
+    align-items: center !important;
+    gap: 40px;
+}
+
+.footer-about .footer-logo {
+    flex-shrink: 0;
+}
+
 .footer-about .about-footer-content {
     padding-left: 0 !important;
     margin-left: 0 !important;
+    flex: 1;
 }
 
 .footer-about .about-footer-content p {
     text-align: left !important;
+}
+
+/* Footer logo styling */
+.footer-logo img {
+    max-width: 200px !important;
+    width: 200px !important;
+    height: auto;
+    filter: brightness(0) invert(1); /* Make logo white on dark background */
 }
  
 

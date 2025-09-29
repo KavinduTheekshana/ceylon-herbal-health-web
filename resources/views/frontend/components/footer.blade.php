@@ -8,7 +8,9 @@
                     <!-- Footer About Start -->
                     <div class="footer-about">
                         <div class="footer-logo">
-                            <img src="{{ asset('frontend/images/footer-logo.svg') }}" alt="">
+                            <a href="{{ route('home') }}">
+                                <img src="{{ asset('frontend/images/logoweb.svg') }}" alt="Ceylon Herbal Health" width="200">
+                            </a>
                         </div>
                         <div class="about-footer-content">
                             <p>Holistic practices for inner peace, focus, and overall well-being.</p>

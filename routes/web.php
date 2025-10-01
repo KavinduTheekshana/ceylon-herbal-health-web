@@ -76,8 +76,14 @@ Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
 // =============================================================================
 
 // Privacy Policy, Terms, etc.
-Route::get('/privacy-policy', [PageController::class, 'show'])->defaults('slug', 'privacy-policy')->name('privacy');
-Route::get('/terms-conditions', [PageController::class, 'show'])->defaults('slug', 'terms-conditions')->name('terms');
+Route::get('/privacy-policy', function () {
+    return view('frontend.privacy.index');
+})->name('privacy');
+
+Route::get('/terms-conditions', function () {
+    return view('frontend.terms.index');
+})->name('terms');
+
 Route::get('/refund-policy', [PageController::class, 'show'])->defaults('slug', 'refund-policy')->name('refund');
 
 // =============================================================================

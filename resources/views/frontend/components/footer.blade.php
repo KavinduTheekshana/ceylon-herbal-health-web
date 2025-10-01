@@ -109,9 +109,9 @@
                     <!-- Footer Privacy Policy Start -->
                     <div class="footer-privacy-policy">
                         <ul>
-                            <li><a href="#">Privacy policy</a></li>
-                            <li><a href="#">Term's & condition</a></li>
-                            <li><a href="#">help</a></li>
+                            <li><a href="{{ route('privacy') }}">Privacy policy</a></li>
+                            <li><a href="{{ route('terms') }}">Terms & conditions</a></li>
+                            <li><a href="{{ route('contact') }}">Help</a></li>
                         </ul>
                     </div>
                     <!-- Footer Privacy Policy End -->

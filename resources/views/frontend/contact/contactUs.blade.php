@@ -90,10 +90,8 @@
                     <div class="contact-social-list wow fadeInUp" data-wow-delay="0.8s">
                         <h3>Follow On Social :</h3>
                         <ul>
-                            <li><a href="#" class="social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                            <li><a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li><a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/ceylonherbalhealth/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/ceylonherbalhealth" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
                         </ul>
                     </div>
                     <!-- Contact Social List End -->

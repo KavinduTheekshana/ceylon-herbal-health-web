@@ -15,12 +15,12 @@ class AppointmentController extends Controller
      */
     public function create()
     {
-        $services = Service::where('is_active', true)
+        $allServices = Service::where('is_active', true)
             ->orderBy('order')
             ->orderBy('title')
             ->get();
 
-        return view('frontend.appointments.create', compact('services'));
+        return view('frontend.appointments.create', compact('allServices'));
     }
 
     /**

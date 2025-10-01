@@ -3,19 +3,27 @@
 @section('title', 'Book Your Appointment')
 
 @section('content')
-<!-- Page Header -->
-<div class="page-header">
+<!-- Page Header Start -->
+<div class="page-header parallaxie">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-lg-12">
-                <div class="page-header-content">
-                    <h1>Book Your Appointment</h1>
-                    <p>Schedule your personalized Ayurvedic consultation with our qualified practitioners</p>
+                <!-- Page Header Box Start -->
+                <div class="page-header-box">
+                    <h1 class="text-anime-style-2" data-cursor="-opaque">Book Your Appointment</h1>
+                    <nav class="wow fadeInUp">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">book appointment</li>
+                        </ol>
+                    </nav>
                 </div>
+                <!-- Page Header Box End -->
             </div>
         </div>
     </div>
 </div>
+<!-- Page Header End -->
 
 <!-- Include the appointment booking section -->
 @include('frontend.home.appointmentBooking')

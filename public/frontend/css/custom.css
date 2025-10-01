@@ -362,3 +362,12 @@ html {
         display: block !important;
     }
 }
+
+/* ===========================================
+   SECTION 11: NAVIGATION ACTIVE STATE
+   =========================================== */
+
+/* Active state for navigation links - uses same color as hover */
+.main-menu ul li a.active {
+    color: var(--accent-secondary-color) !important;
+}

@@ -13,12 +13,12 @@
                 <div class="collapse navbar-collapse main-menu">
                     <div class="nav-menu-wrapper">
                         <ul class="navbar-nav mr-auto" id="menu">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('services.index') }}">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('faq') }}">FAQ's</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact Us</a></li>
-                            <li class="nav-item highlighted-menu"><a class="nav-link" href="{{ route('appointments.create') }}">Book Appointment</a></li>
+                            <li class="nav-item"><a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a></li>
+                            <li class="nav-item"><a class="nav-link {{ request()->routeIs('services.*') ? 'active' : '' }}" href="{{ route('services.index') }}">Services</a></li>
+                            <li class="nav-item"><a class="nav-link {{ request()->routeIs('faq') ? 'active' : '' }}" href="{{ route('faq') }}">FAQ's</a></li>
+                            <li class="nav-item"><a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a></li>
+                            <li class="nav-item highlighted-menu"><a class="nav-link {{ request()->routeIs('appointments.*') ? 'active' : '' }}" href="{{ route('appointments.create') }}">Book Appointment</a></li>
                         </ul>
                     </div>
 

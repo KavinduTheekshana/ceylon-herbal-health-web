@@ -371,3 +371,42 @@ html {
 .main-menu ul li a.active {
     color: var(--accent-secondary-color) !important;
 }
+
+/* ===========================================
+   SECTION 12: TESTIMONIAL SLIDER FIX
+   =========================================== */
+
+/* Fix double arrow issue in testimonial slider */
+/* The problem: Swiper injects SVG icons AND CSS ::after icons are also showing */
+/* Solution: Hide the SVG icons and keep only Font Awesome CSS icons */
+
+/* Hide Swiper's injected SVG icons */
+.our-testimonial-box .swiper-button-prev svg,
+.our-testimonial-box .swiper-button-next svg {
+    display: none !important;
+    /* Hide SVG arrows that Swiper injects */
+}
+
+/* Ensure ::after pseudo-elements are visible and use Font Awesome */
+.our-testimonial-box .swiper-button-prev::after,
+.our-testimonial-box .swiper-button-next::after {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    font-size: 20px !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    font-variant: initial !important;
+    line-height: 1 !important;
+    display: block !important;
+}
+
+/* Use angle-left and angle-right icons */
+.our-testimonial-box .swiper-button-prev::after {
+    content: "\f104" !important;
+    /* fa-angle-left */
+}
+
+.our-testimonial-box .swiper-button-next::after {
+    content: "\f105" !important;
+    /* fa-angle-right */
+}

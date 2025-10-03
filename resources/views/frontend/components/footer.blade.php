@@ -68,7 +68,7 @@
                     <ul>
                         <li><a href="tel:+447349925427">+44 73 499 25427</a></li>
                         <li><a href="mailto:info@ceylonherbalhealth.co.uk">info@ceylonherbalhealth.co.uk</a></li>
-                        <li><a href="https://maps.app.goo.gl/2qai5iQOWTDrVISi6" target="_blank">View Location</a></li>
+                        <li><a href="https://www.google.com/maps/place/Ceylon+Herbal+Health/@52.9233263,-1.481929,20.87z/data=!4m14!1m7!3m6!1s0x4879f10fe076c3c9:0xc327500fb4aee50b!2sThe+Art+house+Studios!8m2!3d52.9233337!4d-1.4819144!16s%2Fg%2F11sw1fvcxq!3m5!1s0x4879f1de25056f35:0xaf51b0aa5da45385!8m2!3d52.9233037!4d-1.4819047!16s%2Fg%2F11lzsnt0n4" target="_blank" rel="noopener noreferrer">Studio 2, The Art House, Friar Gate, Derby DE1 1BU</a></li>
                     </ul>
                 </div>
                 <!-- Footer Contact Links End -->

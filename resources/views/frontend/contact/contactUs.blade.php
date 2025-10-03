@@ -61,7 +61,7 @@
                             <!-- Contact Item Content Start -->
                             <div class="contact-item-content">
                                 <h3>location</h3>
-                                <p>123 High Street, London, UK</p>
+                                <p>Studio 2, The Art House, Friar Gate, Derby DE1 1BU</p>
                             </div>
                             <!-- Contact Item Content End -->
                         </div>

@@ -248,11 +248,6 @@ html {
     margin-left: auto;
 }
 
-/* Remove any margin collapse issues */
-.hero.hero-slider-layout * {
-    margin-right: 0;
-}
-
 /* Override any conflicting Bootstrap styles */
 .hero.hero-slider-layout .row {
     margin-right: 0;

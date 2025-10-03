@@ -22,13 +22,11 @@
             </div>
         </div>
 
+        <!-- Booking Form Row - Centered -->
         <div class="row">
             <div class="col-lg-12">
                 <!-- Appointment Booking Content Start -->
                 <div class="appointment-booking-content">
-                    <div class="row">
-                        <!-- Left Side: Booking Form -->
-                        <div class="col-lg-8">
                             <!-- Booking Form Box Start -->
                             <div class="booking-form-box wow fadeInUp">
                                 <!-- Step Progress Start -->
@@ -199,80 +197,76 @@
                                 <!-- Booking Form End -->
                             </div>
                             <!-- Booking Form Box End -->
+                </div>
+                <!-- Appointment Booking Content End -->
+            </div>
+        </div>
+
+        <!-- Why Book With Us Section - Full Width Row -->
+        <div class="row why-book-section">
+            <div class="col-lg-12">
+                <div class="why-book-container wow fadeInUp" data-wow-delay="0.3s">
+                    <!-- Section Header -->
+                    <div class="why-book-header">
+                        <h3>Why Book With Us?</h3>
+                        <p>Experience authentic Ayurvedic care with our qualified practitioners</p>
+                    </div>
+
+                    <!-- Benefits Grid -->
+                    <div class="benefits-grid">
+                        <div class="benefit-item wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="benefit-icon">
+                                <i class="fa-solid fa-user-doctor"></i>
+                            </div>
+                            <h5>Qualified Ayurvedic Practitioners</h5>
+                            <p>Experienced doctors trained in traditional Sri Lankan Ayurvedic medicine</p>
                         </div>
 
-                        <!-- Right Side: Information & Benefits -->
-                        <div class="col-lg-4">
-                            <!-- Booking Info Box Start -->
-                            <div class="booking-info-box wow fadeInUp" data-wow-delay="0.2s">
-                                <!-- Why Book With Us -->
-                                <div class="booking-benefits">
-                                    <h4>Why Book With Us?</h4>
-                                    <ul class="benefits-list">
-                                        <li>
-                                            <i class="fa-solid fa-check-circle"></i>
-                                            <span>Qualified Sri Lankan Ayurvedic Doctors</span>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-check-circle"></i>
-                                            <span>20+ Years Combined Experience</span>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-check-circle"></i>
-                                            <span>Personalized Treatment Plans</span>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-check-circle"></i>
-                                            <span>Authentic Traditional Methods</span>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-check-circle"></i>
-                                            <span>Free Initial Consultation</span>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-check-circle"></i>
-                                            <span>Natural Herbal Medicines</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="benefit-item wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="benefit-icon">
+                                <i class="fa-solid fa-clipboard-check"></i>
+                            </div>
+                            <h5>Personalized Treatment Plans</h5>
+                            <p>Customized care tailored to your unique health needs and goals</p>
+                        </div>
 
-                               <!-- Special Offer -->
-                                <div class="special-offer">
-                                    <div class="offer-icon">
-                                        <i class="fa-solid fa-gift"></i>
-                                    </div>
-                                    <div class="offer-content">
-                                        <h5>Special Offer</h5>
-                                        <p>First-time patients get <strong>20% off</strong> their initial consultation</p>
-                                    </div>
-                                </div>
+                        <div class="benefit-item wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="benefit-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <h5>Natural Herbal Remedies</h5>
+                            <p>Pure, organic herbs and authentic Ayurvedic medicines for safe healing</p>
+                        </div>
+                    </div>
 
-                                <!-- Contact Options -->
-                                <div class="quick-contact">
-                                    <h5>Need Help?</h5>
-                                    <div class="contact-options">
-                                        <a href="tel:+447349925427" class="contact-btn phone-btn">
-                                            <i class="fa-solid fa-phone"></i>
-                                            <span>Call Us<br><strong>+44 73 499 25427</strong></span>
-                                        </a>
-                                        <a href="https://wa.me/447349925427?text=Hello! I would like to book an appointment for Ayurvedic treatment." class="contact-btn whatsapp-btn" target="_blank">
-                                            <i class="fa-brands fa-whatsapp"></i>
-                                             <span>WhatsApp<br><strong>Chat Now</strong></span>
-                                        </a>
+                    <!-- Contact Section -->
+                    <div class="booking-contact-section">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="contact-info-card">
+                                    <h4>Need Help Booking?</h4>
+                                    <p>Our team is here to assist you with any questions</p>
+                                    <div class="response-time">
+                                        <i class="fa-solid fa-clock"></i>
+                                        <span>Response within <strong>2 hours</strong></span>
                                     </div>
-                                </div>
-
-                                <!-- Response Time -->
-                                <div class="response-info">
-                                    <i class="fa-solid fa-clock"></i>
-                                    <span>We'll confirm your appointment within <strong>2 hours</strong></span>
                                 </div>
                             </div>
-                            <!-- Booking Info Box End -->
+                            <div class="col-lg-6">
+                                <div class="contact-buttons">
+                                    <a href="tel:+447349925427" class="contact-btn phone-btn">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <span>Call Us<br><strong>+44 73 499 25427</strong></span>
+                                    </a>
+                                    <a href="https://wa.me/447349925427?text=Hello! I would like to book an appointment for Ayurvedic treatment." class="contact-btn whatsapp-btn" target="_blank">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                        <span>WhatsApp<br><strong>Chat Now</strong></span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Appointment Booking Content End -->
             </div>
         </div>
     </div>

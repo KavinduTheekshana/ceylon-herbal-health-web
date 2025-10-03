@@ -410,3 +410,239 @@ html {
     content: "\f105" !important;
     /* fa-angle-right */
 }
+
+/* ===========================================
+   SECTION 13: BOOKING PAGE REDESIGN
+   =========================================== */
+
+/* Why Book Section Spacing */
+.why-book-section {
+    margin-top: 60px;
+}
+
+/* Why Book Container */
+.why-book-container {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Why Book Header */
+.why-book-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.why-book-header h3 {
+    color: var(--accent-color);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.why-book-header p {
+    color: var(--body-color);
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 35px;
+    align-items: stretch;
+}
+
+.benefit-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.benefit-item:hover {
+    border-color: var(--accent-secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: #3D493A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.benefit-icon i {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.benefit-item h5 {
+    color: var(--heading-color);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.benefit-item p {
+    color: var(--body-color);
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Contact Section */
+.booking-contact-section {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 30px;
+    border: 2px solid var(--accent-secondary-color);
+}
+
+.contact-info-card h4 {
+    color: var(--accent-color);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-info-card p {
+    color: var(--body-color);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.response-time {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--body-color);
+    font-size: 15px;
+}
+
+.response-time i {
+    color: var(--accent-secondary-color);
+    font-size: 20px;
+}
+
+.response-time strong {
+    color: var(--accent-color);
+}
+
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.contact-btn i {
+    font-size: 32px;
+}
+
+.contact-btn span {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.contact-btn strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.phone-btn {
+    background: #3D493A;
+    color: #ffffff;
+}
+
+.phone-btn:hover {
+    background: #2d3728;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(61, 73, 58, 0.4);
+    color: #ffffff;
+}
+
+.whatsapp-btn {
+    background: #3D493A;
+    color: #ffffff;
+}
+
+.whatsapp-btn:hover {
+    background: #2d3728;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(61, 73, 58, 0.4);
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .why-book-container {
+        padding: 30px 20px;
+    }
+
+    .why-book-header h3 {
+        font-size: 28px;
+    }
+
+    .why-book-header p {
+        font-size: 16px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .booking-contact-section {
+        padding: 25px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-btn {
+        max-width: 100%;
+    }
+
+    .contact-info-card h4 {
+        font-size: 24px;
+    }
+}

@@ -34,7 +34,7 @@
                                        <div class="hero-body wow fadeInUp" data-wow-delay="0.4s">
                                            <!-- Hero Button Start -->
                                            <div class="hero-btn">
-                                               <a href="book-appointment.html" class="btn-default">Discover Our
+                                               <a href="{{ route('services.index') }}" class="btn-default">Discover Our
                                                    Services</a>
                                            </div>
                                            <!-- Hero Button End -->
@@ -79,7 +79,7 @@
                                        <div class="hero-body wow fadeInUp" data-wow-delay="0.4s">
                                            <!-- Hero Button Start -->
                                            <div class="hero-btn">
-                                               <a href="book-appointment.html" class="btn-default">Book Appointment</a>
+                                               <a href="{{ route('appointments.create') }}" class="btn-default">Book Appointment</a>
                                            </div>
                                            <!-- Hero Button End -->
 
@@ -125,7 +125,7 @@
                                        <div class="hero-body wow fadeInUp" data-wow-delay="0.4s">
                                            <!-- Hero Button Start -->
                                            <div class="hero-btn">
-                                               <a href="book-appointment.html" class="btn-default">Book Appointment</a>
+                                               <a href="{{ route('appointments.create') }}" class="btn-default">Book Appointment</a>
                                            </div>
                                            <!-- Hero Button End -->
 

@@ -6,7 +6,7 @@
                 <!-- What We Image Start -->
                 <div class="what-we-image">
                     <figure>
-                        <img src={{ 'frontend/images/what-we-benefit-image.jpg' }} alt="">
+                        <img src={{ 'frontend/images/what-we-benefit-image.jpg' }} class="border-20" alt="">
 
 
                     </figure>
@@ -60,7 +60,7 @@
                         <!-- What We Item Start -->
                         <div class="what-we-item wow fadeInUp">
                             <div class="icon-box">
-                                <img src={{ 'frontend/images/icon-about-benefit-1-light.svg' }} class="w-100" alt="">
+                                <img src={{ 'frontend/images/icon-about-benefit-1-light.svg' }} class="w-100 border-20" alt="">
                             </div>
                             <div class="what-we-item-content">
                                 <h3>Traditional Herbal Consultations</h3>

@@ -56,4 +56,34 @@ class ServiceController extends Controller
             ]
         ]);
     }
+
+    /**
+     * Get therapists for a specific service (for AJAX calls)
+     */
+    public function getTherapists($serviceId)
+    {
+        try {
+            // Find the service
+            $service = Service::findOrFail($serviceId);
+
+            // Get active therapists assigned to this service
+            $therapists = $service->therapists()
+                ->where('therapists.is_active', true)
+                ->orderBy('therapists.order')
+                ->orderBy('therapists.name')
+                ->select('therapists.id', 'therapists.name', 'therapists.specialization')
+                ->get();
+
+            return response()->json([
+                'success' => true,
+                'therapists' => $therapists
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Error loading therapists: ' . $e->getMessage(),
+                'therapists' => []
+            ], 500);
+        }
+    }
 }

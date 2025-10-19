@@ -61,43 +61,60 @@
                                         <div class="step-content">
                                             <h4>Select Your Treatment</h4>
                                             <p>Choose the service you would like to book</p>
-                                            
-                                            <div class="service-selection">
-                                                @foreach($allServices as $service)
-                                                <div class="service-option">
-                                                    <input type="radio" id="service_{{ $service->id }}" name="service_id" value="{{ $service->id }}" required>
-                                                    <label for="service_{{ $service->id }}" class="service-label">
-                                                        <div class="service-info">
-                                                            <div class="service-icon">
-                                                                @if($service->icon)
-                                                                    <img src="{{ asset('storage/' . $service->icon) }}" alt="{{ $service->title }}">
-                                                                @else
-                                                                    <i class="fa-solid fa-leaf"></i>
-                                                                @endif
-                                                            </div>
-                                                            <div class="service-details">
-                                                                <h5>{{ $service->title }}</h5>
-                                                                <p>{{ $service->short_description }}</p>
-                                                            </div>
+
+                                            <!-- Service Selection with Cards -->
+                                            <div class="form-group">
+                                                <label class="service-selection-label">
+                                                    <i class="fa-solid fa-spa"></i> Select Your Treatment *
+                                                </label>
+                                                <p class="service-selection-subtitle">Choose the service that best fits your wellness needs</p>
+
+                                                <!-- Hidden input to store selected service -->
+                                                <input type="hidden" name="service_id" id="service_id" required>
+
+                                                <!-- Service Cards Grid -->
+                                                <div class="service-cards-grid">
+                                                    @foreach($allServices as $service)
+                                                    <div class="service-card" data-service-id="{{ $service->id }}">
+                                                        <div class="service-card-icon">
+                                                            @if($service->icon)
+                                                                <img src="{{ asset('storage/' . $service->icon) }}" alt="{{ $service->title }}">
+                                                            @else
+                                                                <i class="fa-solid fa-leaf"></i>
+                                                            @endif
                                                         </div>
-                                                    </label>
+                                                        <div class="service-card-content">
+                                                            <h5 class="service-card-title">{{ $service->title }}</h5>
+                                                            <p class="service-card-description">{{ $service->short_description ?? 'Authentic Ayurvedic treatment for your wellness' }}</p>
+                                                        </div>
+                                                        <div class="service-card-check">
+                                                            <i class="fa-solid fa-circle-check"></i>
+                                                        </div>
+                                                    </div>
+                                                    @endforeach
                                                 </div>
-                                                @endforeach
                                             </div>
 
-                                            <!-- Employee Selection -->
-                                            <div class="form-group mt-4">
-                                                <label for="practitioner">Preferred Practitioner (Optional)</label>
-                                                <select name="practitioner_id" id="practitioner" class="form-control">
-                                                    <option value="">Any Available Practitioner</option>
-                                                    <option value="1">Dr. Kumara Perera - Senior Physician</option>
-                                                    <option value="2">Dr. Anisha Silva - Women's Health Specialist</option>
-                                                    <option value="3">Therapist Nimal Fernando - Senior Therapist</option>
-                                                </select>
+                                            <!-- Therapist Selection (Dynamic based on service) -->
+                                            <div class="form-group custom-select-wrapper mt-4" id="therapist-group" style="display: none;">
+                                                <label for="therapist_id">
+                                                    <i class="fa-solid fa-user-doctor"></i> Preferred Therapist *
+                                                </label>
+                                                <div class="select-container">
+                                                    <select name="therapist_id" id="therapist_id" class="form-control custom-select" required>
+                                                        <option value="">Please select a service first</option>
+                                                    </select>
+                                                    <i class="fa-solid fa-chevron-down select-arrow"></i>
+                                                </div>
+                                                <small class="form-text text-muted">
+                                                    <i class="fa-solid fa-circle-info"></i> Choose your preferred therapist for this treatment
+                                                </small>
                                             </div>
 
                                             <div class="form-actions">
-                                                <button type="button" class="btn-default btn-next">Continue &nbsp &nbsp &nbsp</button>
+                                                <button type="button" class="btn-default btn-next">
+                                                    Continue  &nbsp &nbsp &nbsp 
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -203,7 +220,7 @@
         </div>
 
         <!-- Why Book With Us Section - Full Width Row -->
-        <div class="row why-book-section">
+        {{-- <div class="row why-book-section">
             <div class="col-lg-12">
                 <div class="why-book-container wow fadeInUp" data-wow-delay="0.3s">
                     <!-- Section Header -->
@@ -268,7 +285,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 <!-- Appointment Booking Section End -->
@@ -281,6 +298,120 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtns = document.querySelectorAll('.btn-next');
     const backBtns = document.querySelectorAll('.btn-back');
     let currentStep = 1;
+
+    // Service card selection - Handle card clicks
+    const serviceCards = document.querySelectorAll('.service-card');
+    const serviceInput = document.getElementById('service_id');
+    const therapistGroup = document.getElementById('therapist-group');
+    const therapistSelect = document.getElementById('therapist_id');
+
+    // Handle service card selection
+    serviceCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const serviceId = this.getAttribute('data-service-id');
+
+            // Remove selected class from all cards
+            serviceCards.forEach(c => c.classList.remove('selected'));
+
+            // Add selected class to clicked card
+            this.classList.add('selected');
+
+            // Set the hidden input value
+            serviceInput.value = serviceId;
+
+            // Trigger therapist loading
+            loadTherapists(serviceId);
+        });
+    });
+
+    // Function to load therapists
+    function loadTherapists(serviceId) {
+        if (serviceId) {
+            // Show loading state with animation
+            therapistSelect.innerHTML = '<option value="">Loading therapists...</option>';
+            therapistSelect.disabled = true;
+            therapistSelect.classList.add('loading');
+            therapistGroup.style.display = 'block';
+
+            // Fetch therapists for selected service
+            fetch(`/api/services/${serviceId}/therapists`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Therapists data:', data); // Debug log
+
+                    // Remove loading state
+                    therapistSelect.classList.remove('loading');
+                    therapistSelect.innerHTML = '';
+
+                    if (data.success && data.therapists && data.therapists.length > 0) {
+                        // Add default option
+                        const defaultOption = document.createElement('option');
+                        defaultOption.value = '';
+                        defaultOption.textContent = 'Select your preferred therapist...';
+                        therapistSelect.appendChild(defaultOption);
+
+                        // Add therapists
+                        data.therapists.forEach(therapist => {
+                            const option = document.createElement('option');
+                            option.value = therapist.id;
+                            option.textContent = therapist.specialization
+                                ? `${therapist.name} - ${therapist.specialization}`
+                                : therapist.name;
+                            therapistSelect.appendChild(option);
+                        });
+
+                        therapistSelect.disabled = false;
+                        therapistSelect.classList.add('success');
+
+                        // Remove success class after animation
+                        setTimeout(() => {
+                            therapistSelect.classList.remove('success');
+                        }, 2000);
+                    } else {
+                        // No therapists available
+                        const option = document.createElement('option');
+                        option.value = '';
+                        option.textContent = data.message || 'No therapists available for this service';
+                        therapistSelect.appendChild(option);
+                        therapistSelect.disabled = true;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading therapists:', error);
+                    therapistSelect.classList.remove('loading');
+                    therapistSelect.classList.add('error');
+                    therapistSelect.innerHTML = `<option value="">Error loading therapists. Please try again.</option>`;
+                    therapistSelect.disabled = true;
+
+                    // Remove error class after animation
+                    setTimeout(() => {
+                        therapistSelect.classList.remove('error');
+                    }, 3000);
+                });
+        } else {
+            // Hide therapist selection if no service selected
+            therapistGroup.style.display = 'none';
+            therapistSelect.innerHTML = '<option value="">Please select a service first</option>';
+            therapistSelect.classList.remove('success', 'error', 'loading');
+        }
+    }
+
+    // Add visual feedback on therapist selection
+    if (therapistSelect) {
+        therapistSelect.addEventListener('change', function() {
+            if (this.value) {
+                this.classList.add('success');
+                setTimeout(() => {
+                    this.classList.remove('success');
+                }, 1000);
+            }
+        });
+    }
 
     // Next button functionality
     nextBtns.forEach(btn => {
@@ -344,7 +475,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form submission
     document.getElementById('appointmentForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        
+
         if (validateCurrentStep()) {
             // Show loading state
             const submitBtn = document.querySelector('.btn-submit');
@@ -357,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-  
+
 
     // Date input minimum date
     const dateInput = document.getElementById('preferred_date');

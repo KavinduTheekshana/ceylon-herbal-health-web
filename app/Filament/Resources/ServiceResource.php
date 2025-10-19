@@ -77,6 +77,14 @@ class ServiceResource extends Resource
                                     ->helperText('Upload an SVG icon file')
                                     ->columnSpan('full'),
 
+                                Forms\Components\Select::make('therapists')
+                                    ->relationship('therapists', 'name')
+                                    ->multiple()
+                                    ->preload()
+                                    ->searchable()
+                                    ->helperText('Select therapists who can provide this service')
+                                    ->columnSpan('full'),
+
                                 Forms\Components\Group::make()
                                     ->schema([
                                         Forms\Components\Toggle::make('is_active')
@@ -140,6 +148,12 @@ class ServiceResource extends Resource
 
                 Tables\Columns\TextColumn::make('short_description')
                     ->limit(30)
+                    ->toggleable(),
+
+                Tables\Columns\TextColumn::make('therapists.name')
+                    ->label('Therapists')
+                    ->badge()
+                    ->separator(',')
                     ->toggleable(),
 
                 Tables\Columns\IconColumn::make('is_active')

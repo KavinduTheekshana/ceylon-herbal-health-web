@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Service extends Model
 {
@@ -30,6 +31,15 @@ class Service extends Model
         'is_featured' => 'boolean',
         'meta_keywords' => 'array',
     ];
+
+    /**
+     * Get the therapists that can provide this service.
+     */
+    public function therapists(): BelongsToMany
+    {
+        return $this->belongsToMany(Therapist::class, 'service_therapist')
+            ->withTimestamps();
+    }
 
     /**
      * Scope a query to only include active services.

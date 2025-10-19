@@ -18,8 +18,9 @@ class HomeController extends Controller
                 ->limit(4)
                 ->get();
 
-            // Get all active services for appointment booking form
+            // Get all active services for appointment booking form (with therapists)
             $allServices = Service::where('is_active', true)
+                ->with('therapists')
                 ->orderBy('order')
                 ->orderBy('title')
                 ->get();

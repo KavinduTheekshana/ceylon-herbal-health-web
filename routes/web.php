@@ -171,10 +171,13 @@ Route::redirect('/contact-us', '/contact', 301);
 Route::prefix('api')->name('api.')->group(function () {
     // Get available time slots for a specific date
     Route::get('/appointment-times/{date}', [AppointmentController::class, 'getAvailableTimes'])->name('appointment.times');
-    
+
     // Check service availability
     Route::get('/service-availability/{service}', [ServiceController::class, 'checkAvailability'])->name('service.availability');
-    
+
+    // Get therapists by service
+    Route::get('/services/{service}/therapists', [ServiceController::class, 'getTherapists'])->name('service.therapists');
+
     // Quick contact form (for popups/modals)
     Route::post('/quick-contact', [ContactController::class, 'quickContact'])->name('contact.quick');
 });

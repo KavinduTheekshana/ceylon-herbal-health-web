@@ -13,16 +13,14 @@ return new class extends Migration
     {
         Schema::create('therapist_availability', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('therapist_id')->constrained()->onDelete('cascade');
-            $table->date('available_date');
+            $table->foreignId('therapist_id')->constrained()->cascadeOnDelete();
+            $table->enum('day_of_week', ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']);
             $table->time('start_time');
             $table->time('end_time');
             $table->boolean('is_available')->default(true);
-            $table->text('notes')->nullable();
             $table->timestamps();
 
-            // Ensure no duplicate time slots for same therapist on same date
-            $table->unique(['therapist_id', 'available_date', 'start_time'], 'therapist_availability_unique');
+            $table->index(['therapist_id', 'day_of_week']);
         });
     }
 

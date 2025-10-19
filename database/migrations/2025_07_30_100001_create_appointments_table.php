@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('phone');
             $table->integer('age')->nullable();
             $table->foreignId('service_id')->nullable()->constrained('services')->nullOnDelete();
-            $table->integer('practitioner_id')->nullable(); // For future expansion
+            $table->foreignId('therapist_id')->nullable()->constrained('therapists')->nullOnDelete();
             $table->date('preferred_date');
             $table->time('preferred_time');
             $table->text('message')->nullable();
@@ -25,8 +25,7 @@ return new class extends Migration
             $table->timestamp('confirmed_at')->nullable();
             $table->timestamps();
 
-            $table->index(['preferred_date', 'status']);
-            $table->index('email');
+            $table->index(['preferred_date', 'preferred_time']);
             $table->index('status');
         });
     }

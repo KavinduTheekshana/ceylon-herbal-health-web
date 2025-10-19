@@ -41,7 +41,7 @@
         </div>
     @endif
 
-    @include('frontend.contact.pageHeader')
+       @include('components.pageHeader', ['title' => 'Contact Us'])
     @include('frontend.contact.contactUs')
     @include('frontend.contact.googleMap')
 @endsection

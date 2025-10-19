@@ -8,7 +8,7 @@
 @section('og_description', 'Discover our comprehensive range of authentic Ceylon Ayurvedic treatments and wellness services. Book your healing session today.')
 
 @section('content')
-    @include('frontend.services.pageHeader')
+        @include('components.pageHeader', ['title' => 'Our Services'])
     @include('frontend.services.servicesList')
     @include('frontend.services.whyChooseUs')
     @include('frontend.home.ourTestimonials')

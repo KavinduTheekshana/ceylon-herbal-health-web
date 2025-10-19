@@ -8,7 +8,7 @@
 @section('og_description', 'Discover our story, meet our expert practitioners, and learn about our commitment to authentic Ceylon Ayurvedic healing.')
 
 @section('content')
-    @include('frontend.about.pageHeader')
+    @include('components.pageHeader', ['title' => 'About Us'])
     @include('frontend.home.about')
     @include('frontend.about.approach')
     @include('frontend.home.whatWeDo')

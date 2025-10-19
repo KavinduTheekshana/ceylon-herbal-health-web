@@ -5,7 +5,7 @@
 @section('meta_description', 'Read real testimonials and reviews from our satisfied clients. Discover how our yoga and meditation programs have transformed lives.')
 
 @section('content')
-    @include('frontend.testimonials.pageHeader')
+    @include('components.pageHeader', ['title' => 'Testimonials'])
     @include('frontend.testimonials.testimonialsList')
     @include('frontend.testimonials.whyChooseUs')
     <x-faq-section :limit="5" />

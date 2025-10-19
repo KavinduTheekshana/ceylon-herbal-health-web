@@ -7,6 +7,6 @@
 @section('meta_keywords', 'FAQ, questions, yoga FAQ, meditation questions, appointment booking, pricing, services')
 
 @section('content')
-    @include('frontend.faq.pageHeader')
+       @include('components.pageHeader', ['title' => 'Frequently Asked Questions'])
     @include('frontend.faq.faqContent')
 @endsection

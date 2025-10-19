@@ -2919,11 +2919,12 @@ header.main-header .header-sticky.active {
 
 .page-header {
     position: relative;
-    background: url('../images/page-header-bg.jpg');
+    /* background: url('../images/page-header-bg.jpg'); */
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center !important;
     background-size: cover;
     padding: 250px 0 140px;
+    /* background-attachment: local !important; */
 }
 
 .page-header::before {

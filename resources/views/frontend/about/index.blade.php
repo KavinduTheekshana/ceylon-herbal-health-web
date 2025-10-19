@@ -11,7 +11,7 @@
     @include('frontend.about.pageHeader')
     @include('frontend.home.about')
     @include('frontend.about.approach')
-    @include('frontend.home.whatWedo')
+    @include('frontend.home.whatWeDo')
     @include('frontend.about.howWeAre')
     @include('frontend.home.whyChooseUs')
     @include('frontend.about.ourExpertise')

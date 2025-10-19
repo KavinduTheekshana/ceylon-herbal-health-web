@@ -443,7 +443,8 @@ document.addEventListener('DOMContentLoaded', function() {
             dayElement.textContent = day;
 
             const date = new Date(currentYear, currentMonth, day);
-            const dateString = date.toISOString().split('T')[0];
+            // Use local date string to avoid timezone conversion issues
+            const dateString = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
             const dayName = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'][date.getDay()];
 
             // Check if date is in the past

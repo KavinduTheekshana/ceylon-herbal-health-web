@@ -178,6 +178,12 @@ Route::prefix('api')->name('api.')->group(function () {
     // Get therapists by service
     Route::get('/services/{service}/therapists', [ServiceController::class, 'getTherapists'])->name('service.therapists');
 
+    // Get therapist availability calendar
+    Route::get('/therapists/{therapist}/availability', [ServiceController::class, 'getTherapistAvailability'])->name('therapist.availability');
+
+    // Get booked time slots for a therapist on a specific date
+    Route::get('/therapists/{therapist}/booked-slots/{date}', [AppointmentController::class, 'getBookedSlots'])->name('therapist.booked-slots');
+
     // Quick contact form (for popups/modals)
     Route::post('/quick-contact', [ContactController::class, 'quickContact'])->name('contact.quick');
 });
@@ -198,9 +204,6 @@ Route::get('/{page:slug}', [PageController::class, 'show'])->name('pages.show');
 // Route::fallback(function () {
 //     return view('frontend.errors.404');
 // });
-
-Route::get('/api/available-slots/{date}', [AppointmentController::class, 'getAvailableSlots'])
-    ->name('api.available-slots');
 
     // Testimonials page
 Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials');

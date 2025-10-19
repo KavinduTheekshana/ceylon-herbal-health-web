@@ -86,4 +86,56 @@ class ServiceController extends Controller
             ], 500);
         }
     }
+
+    /**
+     * Get therapist availability for calendar (for AJAX calls)
+     */
+    public function getTherapistAvailability($therapistId)
+    {
+        try {
+            $therapist = \App\Models\Therapist::with(['availability', 'holidays'])->findOrFail($therapistId);
+
+            // Get weekly schedule
+            $weeklySchedule = $therapist->availability()
+                ->where('is_available', true)
+                ->get()
+                ->groupBy('day_of_week')
+                ->map(function ($schedules) {
+                    return $schedules->map(function ($schedule) {
+                        return [
+                            'start_time' => $schedule->start_time->format('H:i'),
+                            'end_time' => $schedule->end_time->format('H:i'),
+                        ];
+                    });
+                });
+
+            // Get holidays (unavailable dates)
+            $holidays = $therapist->holidays()
+                ->where('status', 'approved')
+                ->where('end_date', '>=', now())
+                ->get()
+                ->map(function ($holiday) {
+                    return [
+                        'start_date' => $holiday->start_date->format('Y-m-d'),
+                        'end_date' => $holiday->end_date->format('Y-m-d'),
+                        'reason' => $holiday->reason,
+                    ];
+                });
+
+            return response()->json([
+                'success' => true,
+                'therapist' => [
+                    'id' => $therapist->id,
+                    'name' => $therapist->name,
+                ],
+                'weekly_schedule' => $weeklySchedule,
+                'holidays' => $holidays,
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Error loading availability: ' . $e->getMessage(),
+            ], 500);
+        }
+    }
 }

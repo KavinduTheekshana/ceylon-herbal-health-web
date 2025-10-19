@@ -17,6 +17,7 @@ class Appointment extends Model
         'phone',
         'age',
         'service_id',
+        'therapist_id',
         'practitioner_id',
         'preferred_date',
         'preferred_time',
@@ -39,6 +40,14 @@ class Appointment extends Model
     public function service(): BelongsTo
     {
         return $this->belongsTo(Service::class);
+    }
+
+    /**
+     * Get the therapist associated with the appointment
+     */
+    public function therapist(): BelongsTo
+    {
+        return $this->belongsTo(Therapist::class);
     }
 
     /**
@@ -98,13 +107,20 @@ class Appointment extends Model
     }
 
     /**
-     * Get practitioner name (for future use)
+     * Get practitioner name (legacy - kept for backward compatibility)
+     * Use therapist relationship instead for new appointments
      */
     public function getPractitionerNameAttribute()
     {
+        // If therapist relationship exists, use it
+        if ($this->therapist) {
+            return $this->therapist->name;
+        }
+
+        // Fallback to legacy practitioner_id
         return match($this->practitioner_id) {
             1 => 'Dr. Kumara Perera',
-            2 => 'Dr. Anisha Silva', 
+            2 => 'Dr. Anisha Silva',
             3 => 'Therapist Nimal Fernando',
             default => 'Any Available Practitioner'
         };

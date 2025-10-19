@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Builder;
 
 class Therapist extends Model
@@ -33,6 +34,22 @@ class Therapist extends Model
     {
         return $this->belongsToMany(Service::class, 'service_therapist')
             ->withTimestamps();
+    }
+
+    /**
+     * Get the availability schedules for this therapist.
+     */
+    public function availability(): HasMany
+    {
+        return $this->hasMany(TherapistAvailability::class);
+    }
+
+    /**
+     * Get the holidays for this therapist.
+     */
+    public function holidays(): HasMany
+    {
+        return $this->hasMany(TherapistHoliday::class);
     }
 
     /**

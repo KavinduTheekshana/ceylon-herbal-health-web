@@ -74,7 +74,145 @@ class TherapistResource extends Resource
                                     ->helperText('Therapists are sorted by this value (ascending order)'),
                             ])
                             ->columns(2),
-                    ]),
+
+                        Forms\Components\Section::make('Holidays & Time Off')
+                            ->description('Manage vacation days, sick leave, and other time off requests')
+                            ->schema([
+                                Forms\Components\Repeater::make('holidays')
+                                    ->relationship('holidays')
+                                    ->schema([
+                                        Forms\Components\DatePicker::make('start_date')
+                                            ->label('Start Date')
+                                            ->required()
+                                            ->native(false)
+                                            ->displayFormat('M d, Y')
+                                            ->minDate(now())
+                                            ->live()
+                                            ->afterStateUpdated(function ($state, callable $set, callable $get) {
+                                                // Auto-set end date to start date if empty
+                                                if (!$get('end_date')) {
+                                                    $set('end_date', $state);
+                                                }
+                                            }),
+
+                                        Forms\Components\DatePicker::make('end_date')
+                                            ->label('End Date')
+                                            ->required()
+                                            ->native(false)
+                                            ->displayFormat('M d, Y')
+                                            ->minDate(now())
+                                            ->afterOrEqual('start_date'),
+
+                                        Forms\Components\TextInput::make('reason')
+                                            ->label('Reason')
+                                            ->placeholder('E.g., Vacation, Sick Leave, Personal Day')
+                                            ->maxLength(255),
+
+                                        Forms\Components\Select::make('status')
+                                            ->label('Status')
+                                            ->options([
+                                                'pending' => 'Pending Approval',
+                                                'approved' => 'Approved',
+                                                'rejected' => 'Rejected',
+                                            ])
+                                            ->default('approved')
+                                            ->required()
+                                            ->native(false),
+
+                                        Forms\Components\Textarea::make('notes')
+                                            ->label('Additional Notes')
+                                            ->rows(2)
+                                            ->columnSpan('full')
+                                            ->placeholder('Any additional information about this time off'),
+                                    ])
+                                    ->columns(4)
+                                    ->defaultItems(0)
+                                    ->addActionLabel('Add Holiday/Time Off')
+                                    ->reorderable(false)
+                                    ->collapsible()
+                                    ->itemLabel(fn (array $state): ?string =>
+                                        isset($state['start_date']) && isset($state['end_date'])
+                                            ? ($state['start_date'] === $state['end_date']
+                                                ? date('M d, Y', strtotime($state['start_date'])) .
+                                                  (isset($state['reason']) ? ' - ' . $state['reason'] : '')
+                                                : date('M d', strtotime($state['start_date'])) . ' to ' .
+                                                  date('M d, Y', strtotime($state['end_date'])) .
+                                                  (isset($state['reason']) ? ' - ' . $state['reason'] : ''))
+                                            : 'New Holiday'
+                                    )
+                                    ->helperText('These dates will override the weekly schedule'),
+                            ])
+                            ->columnSpan(['lg' => 3])
+                            ->collapsible(),
+
+                        Forms\Components\Section::make('Weekly Availability Schedule')
+                            ->description('Set recurring weekly schedule for this therapist')
+                            ->schema([
+                                Forms\Components\Repeater::make('availability')
+                                    ->relationship('availability')
+                                    ->schema([
+                                        Forms\Components\Select::make('day_of_week')
+                                            ->label('Day')
+                                            ->required()
+                                            ->options([
+                                                'monday' => 'Monday',
+                                                'tuesday' => 'Tuesday',
+                                                'wednesday' => 'Wednesday',
+                                                'thursday' => 'Thursday',
+                                                'friday' => 'Friday',
+                                                'saturday' => 'Saturday',
+                                                'sunday' => 'Sunday',
+                                            ])
+                                            ->searchable()
+                                            ->native(false),
+
+                                        Forms\Components\TimePicker::make('start_time')
+                                            ->label('Start Time')
+                                            ->required()
+                                            ->seconds(false)
+                                            ->native(false)
+                                            ->displayFormat('g:i A'),
+
+                                        Forms\Components\TimePicker::make('end_time')
+                                            ->label('End Time')
+                                            ->required()
+                                            ->seconds(false)
+                                            ->native(false)
+                                            ->displayFormat('g:i A')
+                                            ->after('start_time'),
+
+                                        Forms\Components\Toggle::make('is_available')
+                                            ->label('Available')
+                                            ->default(true)
+                                            ->inline(false)
+                                            ->helperText('Toggle off for days off'),
+
+                                        Forms\Components\Textarea::make('notes')
+                                            ->label('Notes')
+                                            ->rows(2)
+                                            ->columnSpan('full')
+                                            ->placeholder('E.g., Lunch break 12-1 PM, Limited slots, etc.'),
+                                    ])
+                                    ->columns(4)
+                                    ->defaultItems(0)
+                                    ->addActionLabel('Add Day Schedule')
+                                    ->reorderable(false)
+                                    ->collapsible()
+                                    ->collapsed(false)
+                                    ->itemLabel(fn (array $state): ?string =>
+                                        isset($state['day_of_week']) && isset($state['start_time'])
+                                            ? ucfirst($state['day_of_week']) . ' - ' .
+                                              date('g:i A', strtotime($state['start_time'])) . ' to ' .
+                                              (isset($state['end_time']) ? date('g:i A', strtotime($state['end_time'])) : '...')
+                                            : 'New Schedule'
+                                    )
+                                    ->cloneable()
+                                    ->helperText('You can add multiple time slots per day (e.g., Morning 9-12, Afternoon 2-5)'),
+                            ])
+                            ->columnSpan(['lg' => 3])
+                            ->collapsible(),
+                    ])
+                    ->columns(3),
             ]);
     }
 

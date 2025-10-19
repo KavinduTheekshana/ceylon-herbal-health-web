@@ -1,3 +1,7 @@
+@php
+    use App\Helpers\SeoHelper;
+    $seo = SeoHelper::get();
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,38 +12,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="@yield('meta_description', 'Experience authentic Ceylon Ayurveda healing and wellness treatments at Ceylon Herbal Health. Book your personalized consultation with our qualified practitioners in the United Kingdom.')">
-    <meta name="keywords" content="@yield('meta_keywords', 'Ayurveda UK, Ceylon Ayurveda, Herbal Medicine, Natural Healing, Wellness Treatment, Ayurvedic Consultation, Traditional Medicine, Holistic Health, Ayurveda United Kingdom')">
+    <meta name="description" content="{{ $metaDescription ?? $seo['meta_description'] ?? 'Experience authentic Ceylon Ayurveda healing and wellness treatments at Ceylon Herbal Health. Book your personalized consultation with our qualified practitioners in the United Kingdom.' }}">
+    <meta name="keywords" content="{{ $metaKeywords ?? $seo['meta_keywords'] ?? 'Ayurveda UK, Ceylon Ayurveda, Herbal Medicine, Natural Healing, Wellness Treatment, Ayurvedic Consultation, Traditional Medicine, Holistic Health, Ayurveda United Kingdom' }}">
     <meta name="author" content="Ceylon Herbal Health">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="{{ $seo['robots'] ?? 'index, follow' }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Page Title -->
-    <title>@yield('title', 'Ceylon Herbal Health - Authentic Ceylon Ayurveda & Wellness in the UK')</title>
+    <title>{{ $pageTitle ?? $seo['title'] ?? 'Ceylon Herbal Health - Authentic Ceylon Ayurveda & Wellness in the UK' }}</title>
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:type" content="{{ $ogType ?? $seo['og_type'] ?? 'website' }}">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="@yield('og_title', 'Ceylon Herbal Health - Authentic Ceylon Ayurveda')">
-    <meta property="og:description" content="@yield('og_description', 'Experience authentic Ceylon Ayurveda healing and wellness treatments at Ceylon Herbal Health.')">
-    <meta property="og:image" content="@yield('og_image', asset('images/og-image.jpg'))">
+    <meta property="og:title" content="{{ $ogTitle ?? $seo['og_title'] ?? $seo['title'] ?? 'Ceylon Herbal Health - Authentic Ceylon Ayurveda' }}">
+    <meta property="og:description" content="{{ $ogDescription ?? $seo['og_description'] ?? $seo['meta_description'] ?? 'Experience authentic Ceylon Ayurveda healing and wellness treatments at Ceylon Herbal Health.' }}">
+    <meta property="og:image" content="{{ $ogImage ?? ($seo['og_image'] ? (str_starts_with($seo['og_image'], 'http') ? $seo['og_image'] : asset('storage/' . $seo['og_image'])) : asset('images/og-image.jpg')) }}">
     <meta property="og:site_name" content="Ceylon Herbal Health">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ url()->current() }}">
-    <meta name="twitter:title" content="@yield('twitter_title', 'Ceylon Herbal Health - Authentic Ceylon Ayurveda')">
-    <meta name="twitter:description" content="@yield('twitter_description', 'Experience authentic Ceylon Ayurveda healing and wellness treatments.')">
-    <meta name="twitter:image" content="@yield('twitter_image', asset('images/og-image.jpg'))">
+    <meta name="twitter:title" content="{{ $twitterTitle ?? $seo['twitter_title'] ?? $seo['og_title'] ?? $seo['title'] ?? 'Ceylon Herbal Health - Authentic Ceylon Ayurveda' }}">
+    <meta name="twitter:description" content="{{ $twitterDescription ?? $seo['twitter_description'] ?? $seo['og_description'] ?? $seo['meta_description'] ?? 'Experience authentic Ceylon Ayurveda healing and wellness treatments.' }}">
+    <meta name="twitter:image" content="{{ $twitterImage ?? ($seo['twitter_image'] ? (str_starts_with($seo['twitter_image'], 'http') ? $seo['twitter_image'] : asset('storage/' . $seo['twitter_image'])) : ($seo['og_image'] ? (str_starts_with($seo['og_image'], 'http') ? $seo['og_image'] : asset('storage/' . $seo['og_image'])) : asset('images/og-image.jpg'))) }}">
 
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/favicon.svg') }}">
-    <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ SeoHelper::getFavicon() }}">
+    <link rel="apple-touch-icon" href="{{ SeoHelper::getAppleTouchIcon() }}">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="@yield('canonical', url()->current())">
+    <link rel="canonical" href="{{ $canonicalUrl ?? $seo['canonical_url'] ?? url()->current() }}">
 
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com">

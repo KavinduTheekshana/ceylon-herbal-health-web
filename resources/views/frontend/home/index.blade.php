@@ -2,6 +2,15 @@
 
 @extends('layouts.frontend')
 
+@section('title', 'Ceylon Herbal Health - Authentic Ceylon Ayurveda & Wellness in the UK')
+
+@section('meta_description', 'Experience authentic Ceylon Ayurveda healing and wellness treatments at Ceylon Herbal Health. Book your personalized consultation with our qualified practitioners in the United Kingdom. Natural herbal remedies and traditional healing methods.')
+
+@section('meta_keywords', 'Ayurveda UK, Ceylon Ayurveda, Herbal Medicine UK, Natural Healing, Ayurvedic Treatment, Traditional Medicine, Holistic Health, Wellness Center UK, Ayurvedic Consultation, Herbal Therapy')
+
+@section('og_title', 'Ceylon Herbal Health - Authentic Ceylon Ayurveda in the UK')
+@section('og_description', 'Discover natural healing through authentic Ceylon Ayurveda. Book your personalized wellness consultation today.')
+
 @section('content')
     @include('frontend.home.slider')
     @include('frontend.home.appointmentBooking')  {{-- NEW: Added appointment booking section --}}

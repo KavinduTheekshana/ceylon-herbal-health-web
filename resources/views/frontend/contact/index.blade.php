@@ -1,7 +1,11 @@
 @extends('layouts.frontend')
 
-@section('title', 'Contact Us - Get in Touch')
-@section('meta_description', 'Contact us for inquiries about our Ayurvedic treatments and wellness services. We\'re here to help you on your journey to better health.')
+@section('title', 'Contact Us - Ceylon Herbal Health | Get in Touch')
+@section('meta_description', 'Contact Ceylon Herbal Health for inquiries about our Ayurvedic treatments and wellness services in the United Kingdom. Call us, visit our clinic, or send us a message. We\'re here to help you on your journey to better health.')
+@section('meta_keywords', 'Contact Ceylon Herbal Health, Ayurveda Clinic UK, Book Ayurveda Appointment, Wellness Center Contact, Get in Touch, Ayurvedic Consultation Enquiry')
+
+@section('og_title', 'Contact Ceylon Herbal Health - Get in Touch')
+@section('og_description', 'Reach out to Ceylon Herbal Health for personalized Ayurvedic consultations and wellness treatments in the UK.')
 
 @section('content')
     <!-- Display Success/Error Messages -->

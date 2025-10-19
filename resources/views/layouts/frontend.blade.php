@@ -1,25 +1,52 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="Awaiken">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="@yield('meta_description', 'Experience authentic Ceylon Ayurveda healing and wellness treatments at Ceylon Herbal Health. Book your personalized consultation with our qualified practitioners in the United Kingdom.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'Ayurveda UK, Ceylon Ayurveda, Herbal Medicine, Natural Healing, Wellness Treatment, Ayurvedic Consultation, Traditional Medicine, Holistic Health, Ayurveda United Kingdom')">
+    <meta name="author" content="Ceylon Herbal Health">
+    <meta name="robots" content="index, follow">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Page Title -->
-    <title>Restraint - Yoga & Meditation HTML Template</title>
+    <title>@yield('title', 'Ceylon Herbal Health - Authentic Ceylon Ayurveda & Wellness in the UK')</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="@yield('og_title', 'Ceylon Herbal Health - Authentic Ceylon Ayurveda')">
+    <meta property="og:description" content="@yield('og_description', 'Experience authentic Ceylon Ayurveda healing and wellness treatments at Ceylon Herbal Health.')">
+    <meta property="og:image" content="@yield('og_image', asset('images/og-image.jpg'))">
+    <meta property="og:site_name" content="Ceylon Herbal Health">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ url()->current() }}">
+    <meta name="twitter:title" content="@yield('twitter_title', 'Ceylon Herbal Health - Authentic Ceylon Ayurveda')">
+    <meta name="twitter:description" content="@yield('twitter_description', 'Experience authentic Ceylon Ayurveda healing and wellness treatments.')">
+    <meta name="twitter:image" content="@yield('twitter_image', asset('images/og-image.jpg'))">
+
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/favicon.svg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="@yield('canonical', url()->current())">
+
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Sora:wght@100..800&display=swap"
         rel="stylesheet">
+
     <!-- Bootstrap Css -->
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
     <!-- SlickNav Css -->
@@ -42,9 +69,7 @@
     <!-- Swiper CSS (via CDN) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-
     @stack('styles')
-    {{-- @vite(['', 'resources/js/app.js']) --}}
 </head>
 
 <body>
@@ -58,10 +83,12 @@
     </div> --}}
     <!-- Preloader End -->
 
-
     @include('frontend.components.header')
+
     @yield('content')
+
     @include('frontend.components.footer')
+
     {{-- SwiperJs --}}
     <!-- Swiper JS (via CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -92,7 +119,6 @@
             console.log("Swiper initialized:", swiper);
         });
     </script>
-
 
     <!-- Jquery Library File -->
     <script src="{{ asset('frontend/js/jquery-3.7.1.min.js') }}"></script>
@@ -125,6 +151,7 @@
     <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
     <!-- Main Custom js file -->
     <script src="{{ asset('frontend/js/function.js') }}"></script>
+
     @stack('scripts')
 </body>
 

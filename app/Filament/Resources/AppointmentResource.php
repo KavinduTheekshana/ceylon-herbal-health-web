@@ -23,6 +23,8 @@ class AppointmentResource extends Resource
 
     protected static ?int $navigationSort = 1;
 
+    protected static ?string $navigationGroup = 'Appointments';
+
     public static function form(Form $form): Form
     {
         return $form

@@ -24,9 +24,9 @@ class TherapistHolidayResource extends Resource
 
     protected static ?string $pluralModelLabel = 'Holidays';
 
-    protected static ?string $navigationGroup = 'Content Management';
+    protected static ?string $navigationGroup = 'Appointments';
 
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 3;
 
     public static function form(Form $form): Form
     {

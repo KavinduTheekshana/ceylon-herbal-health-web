@@ -17,6 +17,11 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use App\Filament\Widgets\StatsOverviewWidget;
+use App\Filament\Widgets\AppointmentsChart;
+use App\Filament\Widgets\RecentAppointments;
+use App\Filament\Widgets\ServicesOverview;
+use App\Filament\Widgets\UpcomingAppointmentsCalendar;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -27,18 +32,30 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('Ceylon Herbal Health')
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Emerald,
+                'success' => Color::Green,
+                'warning' => Color::Amber,
+                'danger' => Color::Red,
+                'info' => Color::Blue,
             ])
+            ->font('Inter')
+            ->darkMode(true)
+            ->favicon(asset('favicon.ico'))
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
-                Pages\Dashboard::class,
+                \App\Filament\Pages\Dashboard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                StatsOverviewWidget::class,
+                AppointmentsChart::class,
+                ServicesOverview::class,
+                UpcomingAppointmentsCalendar::class,
+                RecentAppointments::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -53,6 +70,15 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->navigationGroups([
+                'Appointments',
+                'Services',
+                'Content',
+                'Settings',
+            ])
+            ->sidebarCollapsibleOnDesktop()
+            ->maxContentWidth('full')
+            ->spa();
     }
 }

@@ -9,7 +9,7 @@
 
 @section('content')
     @include('components.pageHeader', ['title' => 'About Us'])
-    @include('frontend.home.about')
+    {{-- @include('frontend.home.about') --}}
     @include('frontend.about.approach')
     @include('frontend.home.whatWeDo')
     @include('frontend.about.howWeAre')

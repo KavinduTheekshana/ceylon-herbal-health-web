@@ -17,7 +17,7 @@ class FaqCategoryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'FAQ Management';
+    protected static ?string $navigationGroup = 'Content';
 
     protected static ?int $navigationSort = 1;
 

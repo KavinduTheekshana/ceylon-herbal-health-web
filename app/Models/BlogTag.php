@@ -14,6 +14,7 @@ class BlogTag extends Model
     protected $fillable = [
         'name',
         'slug',
+        'color',
     ];
 
     /**
